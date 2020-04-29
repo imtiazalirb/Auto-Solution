@@ -1,0 +1,40 @@
+/*--NAVBAR--*/
+
+/*
+
+.mynav{
+   background-image: url('../img/1.jpg');
+   height:500px;
+}
+
+.navbar{
+  background-color: transparent !important;
+}
+
+.navbar .nav-item{
+    color: #FFF !important;
+}
+
+*/
+
+.navbar .navbar-brand{
+
+  font-weight: lighter;
+  font-size: 0.8cm;
+}
+
+.navbar .nav-form{
+  margin : 0px 0px 0px 0px;
+}
+
+
+/*--CAROUSEL--*/
+
+.carousel-item img{
+  height: 100%;
+  width: 100%;
+}
+
+.lead{
+  font-size: 16px;
+}
