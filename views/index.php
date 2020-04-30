@@ -51,14 +51,13 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
-      </div>
 
       <!--MODALS LOGIN-->
 
-      <button class="btn btn-success my-2 ml-2 my-sm-0" data-toggle="modal" data-target="#loginModal">Login</button>
+      <button class="btn btn-success my-sm-2 ml-lg-2" data-toggle="modal" data-target="#loginModal">Login</button>
 
-      <div class="modal" id="loginModal">
-        <div class="modal-dialog modal-sm">
+      <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered-sm modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">User Login</h5>
@@ -76,17 +75,19 @@
                 </div>
               </form>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer justify-content-center">
               <a class="btn btn-warning" href="signup.php" role="button">Sign Up</a>
               <button class="btn btn-success">Login</button>
-              <button class="btn btn-danger" data-dismiss="modal">Close</button>
+            <!--  <button class="btn btn-danger" data-dismiss="modal">Close</button> -->
             </div>
           </div>
         </div>
       </div>
+     </div>
     </nav>
   </div>
 </header>
+
 
 
 <!--CAROUSEL-->
