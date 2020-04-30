@@ -49,8 +49,39 @@
           <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-        </form>
+      </div>
+
+      <!--MODALS LOGIN-->
+
+      <button class="btn btn-success my-2 ml-2 my-sm-0" data-toggle="modal" data-target="#loginModal">Login</button>
+
+      <div class="modal" id="loginModal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">User Login</h5>
+              <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input class="form-control" type="text" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input class="form-control" type="password" placeholder="Password">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-warning" data-dismiss="modal">Sign Up</button>
+              <button class="btn btn-success">Login</button>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
@@ -59,9 +90,9 @@
 <!--MODAL SIGN IN & SIGN UP-->
 
 
-  <div class="conainer">
-      <button class="btn btn-success my-2 ml-2 my-sm-0"  data-target="#mymodal data-toggle="modal">Login / Signup</button>
-    </div>
+
+
+
 
 
 <!--CAROUSEL-->
