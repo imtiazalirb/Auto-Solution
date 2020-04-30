@@ -77,8 +77,9 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button class="btn btn-warning" data-dismiss="modal">Sign Up</button>
+              <button class="btn btn-warning"><a href="signup.php">Sign Up</a></button>
               <button class="btn btn-success">Login</button>
+              <button class="btn btn-warning" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -86,13 +87,6 @@
     </nav>
   </div>
 </header>
-
-<!--MODAL SIGN IN & SIGN UP-->
-
-
-
-
-
 
 
 <!--CAROUSEL-->
