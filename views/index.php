@@ -77,9 +77,9 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button class="btn btn-warning"><a href="signup.php">Sign Up</a></button>
+              <a class="btn btn-warning" href="signup.php" role="button" data-dismiss="modal">Sign Up</a>
               <button class="btn btn-success">Login</button>
-              <button class="btn btn-warning" data-dismiss="modal">Close</button>
+              <button class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
