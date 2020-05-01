@@ -60,10 +60,12 @@
      </div>
     </nav>
   </div>
-</header>
+</heade
 
 <!--SIGNUP FORM-->
 
+
+<h3 class="display-5 text-center my-4">Membership Registration Form</h3>
 <div class="container">
 
   <form class="needs-validation" novalidate>
@@ -142,6 +144,7 @@
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Submit</button>
+  <a class="btn btn-danger" href="../index.php" role="button">Cancel</a>
 </form>
 
 <script>
