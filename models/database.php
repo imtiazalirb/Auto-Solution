@@ -2,7 +2,7 @@
 	 $serverName="localhost";
 	 $userName="root";
 	 $password="";
-	 $dbName="dummy_project";
+	 $dbName="auto_solution";
 	function execute($query) //executing non query
 	{
 		global $serverName;

@@ -12,7 +12,7 @@
   <header>
     <div class="mynav">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand mb-2" href="../index.php">Auto Solution</a>
+      <a class="navbar-brand mb-2" href="">Auto Solution</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,34 +20,34 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../index.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link disabled" href="../index.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Our Services
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Car Service</a>
-              <a class="dropdown-item" href="#">Dent Paint</a>
-              <a class="dropdown-item" href="#">Cleaning</a>
-              <a class="dropdown-item" href="#">Wheel Care</a>
-              <a class="dropdown-item" href="#">AC Service</a>
-              <a class="dropdown-item" href="#">Nano Coating</a>
+              <a class="dropdown-item disabled" href="#">Car Service</a>
+              <a class="dropdown-item disabled" href="#">Dent Paint</a>
+              <a class="dropdown-item disabled" href="#">Cleaning</a>
+              <a class="dropdown-item disabled" href="#">Wheel Care</a>
+              <a class="dropdown-item disabled" href="#">AC Service</a>
+              <a class="dropdown-item disabled" href="#">Nano Coating</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Request a quote</a>
+              <a class="dropdown-item disabled" href="#">Request a quote</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="request_quote.php">Request a quote</a>
+            <a class="nav-link disabled" href="request_quote.php">Request a quote</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="our_products.php">Our Products</a>
+            <a class="nav-link disabled" href="our_products.php">Our Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact_us.php">Contact Us</a>
+            <a class="nav-link disabled" href="contact_us.php">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about_us.php">About Us</a>
+            <a class="nav-link disabled" href="about_us.php">About Us</a>
           </li>
         </ul>
 
@@ -63,7 +63,6 @@
 </heade
 
 <!--SIGNUP FORM-->
-
 
 <h3 class="display-5 text-center my-4">Membership Registration Form</h3>
 <div class="container">
