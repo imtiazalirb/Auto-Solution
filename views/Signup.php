@@ -87,14 +87,54 @@
     </div>
   </div>
 
-    <div class="form-row ">
-   <div class="col-md-6 mb-3">
-    <label for="validationCustom03">Date</label>
+  <div class="form-row ">
+   <div class="col-md-4 mb-3">
+    <label for="validationCustom03">Birth date</label>
     <input type="text" class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" required>
     <div class="invalid-feedback">
-      Please provide a valid city.
+      Please provide birth date.
     </div>
    </div>
+   <div class="col-md-4 mb-3">
+       <label for="validationCustom04">Gender</label>
+       <select class="custom-select" id="validationCustom04" required>
+         <option selected disabled value="">Choose</option>
+         <option>Male</option>
+         <option>Female</option>
+         <option>Other</option>
+       </select>
+       <div class="invalid-feedback">
+         Please select a valid state.
+       </div>
+     </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Email</label>
+      <input type="email" class="form-control" id="validationCustom01" placeholder="Email" required>
+      <div class="invalid-feedback">
+        PLease provide a email
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Phone Number</label>
+      <input type="tel" class="form-control" id="validationCustom02" placeholder="+xxx-xxxxxx" pattern="[/+][0-9]{13,}" required>
+      <div class="invalid-feedback">
+        Please provide a phone number
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="col-md-12 mb-3">
+      <label for="validationCustom03">Street Address</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Street Address" required>
+      <div class="invalid-feedback">
+        Please provide a valid street address.
+      </div>
+    </div>
   </div>
 
 
@@ -108,14 +148,17 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+      <select class="custom-select" id="validationCustom04" required>
+        <option selected disabled value="">Choose</option>
+        <option>...</option>
+      </select>
       <div class="invalid-feedback">
-        Please provide a valid state.
+        Please select a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" pattern="[0-9]{3,}" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
