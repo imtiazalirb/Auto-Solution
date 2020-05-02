@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.min.js">
   <link rel="stylesheet" href="styles/mystyle.css">
+  <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   <title>Sign Up</title>
 </head>
 <body>
@@ -83,21 +85,19 @@
         Looks good!
       </div>
     </div>
-
-
-    <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername">Username</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div>
-    </div>
   </div>
+
+    <div class="form-row ">
+   <div class="col-md-6 mb-3">
+    <label for="validationCustom03">Date</label>
+    <input type="text" class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+   </div>
+  </div>
+
+
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">City</label>
@@ -171,5 +171,23 @@
   <script src="../js/jquery-slim.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <script>
+  $(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'dd/mm/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+      startDate: "01/01/1900",
+      endDate: "31/12/2020",
+		})
+	})
+  </script>
 </body>
 </html>
