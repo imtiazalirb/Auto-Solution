@@ -119,7 +119,7 @@
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Phone Number</label>
-      <input type="tel" class="form-control" id="validationCustom02" placeholder="+xxx-xxxxxx" pattern="[/+][0-9]{13,}" required>
+      <input type="tel" class="form-control" id="validationCustom02" placeholder="+123456789000" pattern="[/+][0-9]{13,}" required>
       <div class="invalid-feedback">
         Please provide a phone number
       </div>
@@ -147,13 +147,10 @@
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom04">State</label>
-      <select class="custom-select" id="validationCustom04" required>
-        <option selected disabled value="">Choose</option>
-        <option>...</option>
-      </select>
+      <label for="validationCustom03">City</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
       <div class="invalid-feedback">
-        Please select a valid state.
+        Please provide a valid State.
       </div>
     </div>
     <div class="col-md-3 mb-3">
