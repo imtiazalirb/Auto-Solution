@@ -128,7 +128,7 @@
 
 
   <div class="form-row">
-    <div class="col-md-12 mb-3">
+    <div class="col-md-10 mb-3">
       <label for="validationCustom03">Street Address</label>
       <input type="text" class="form-control" id="validationCustom03" placeholder="Street Address" required>
       <div class="invalid-feedback">
@@ -139,21 +139,21 @@
 
 
   <div class="form-row">
-    <div class="col-md-6 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationCustom03">City</label>
       <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom03">City</label>
-      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom03">State</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="State" required>
       <div class="invalid-feedback">
         Please provide a valid State.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
+    <div class="col-md-2 mb-3">
       <label for="validationCustom05">Zip</label>
       <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" pattern="[0-9]{3,}" required>
       <div class="invalid-feedback">
@@ -162,15 +162,23 @@
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom05">Username</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Username" pattern="[0-9]{3,}" required>
+      <div class="invalid-feedback">
+        Please provide a valid username.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
    <label for="inputPassword6">Password</label>
-   <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+   <input type="password" id="inputPassword6" class="form-control" placeholder="Password" aria-describedby="passwordHelpInline" required>
    <small id="passwordHelpInline" class="text-muted">
      Must be 8-20 characters long.
    </small>
  </div>
-
   </div>
+
+
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
