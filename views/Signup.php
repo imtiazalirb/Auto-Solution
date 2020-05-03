@@ -171,9 +171,9 @@
     </div>
     <div class="col-md-4 mb-3">
    <label for="inputPassword6">Password</label>
-   <input type="password" id="inputPassword6" class="form-control" placeholder="Password" aria-describedby="passwordHelpInline" required>
+   <input type="password" id="inputPassword6" class="form-control" placeholder="Password" aria-describedby="passwordHelpInline" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
    <small id="passwordHelpInline" class="text-muted">
-     Must be 8-20 characters long.
+     Must be 8-20 characters long and contain one upprecase.
    </small>
  </div>
   </div>
