@@ -18,9 +18,11 @@ function insertUser()
     $state=$_POST["state"];
     $zip=$_POST["zip"];
     $username=$_POST["username"];
-    $password=$_POST["password"];
-		$query="INSERT INTO users_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$password')";
+    $pass=$_POST["password"];
+    $passToDB = password_hash($pass, PASSWORD_DEFAULT);
+		$query="INSERT INTO users_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$passToDB')";
 		execute($query);
+    header("Location: ../index.php");
 	}
 
 ?>
