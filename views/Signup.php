@@ -113,13 +113,19 @@
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">Email</label>
       <input type="email" class="form-control" id="validationCustom01" placeholder="Email" required>
+      <small id="phonedHelpInline" class="text-muted">
+        Ex: abc@example.com
+      </small>
       <div class="invalid-feedback">
         PLease provide a email
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Phone Number</label>
-      <input type="tel" class="form-control" id="validationCustom02" placeholder="+123456789000" pattern="[/+][0-9]{13,}" required>
+      <input type="tel" class="form-control" id="validationCustom02" placeholder="Phne Number" pattern="[/+][0-9]{13,}" required>
+      <small id="phonedHelpInline" class="text-muted">
+        Ex: +8801710000000
+      </small>
       <div class="invalid-feedback">
         Please provide a phone number
       </div>
