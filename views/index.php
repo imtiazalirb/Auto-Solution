@@ -70,22 +70,23 @@
               <button class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-              <form>
+              <form action="../controllers/login_controller.php" method="post">
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input class="form-control" type="text" placeholder="Username">
+                  <input class="form-control" name="username" type="text" placeholder="Username">
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input class="form-control" type="password" placeholder="Password">
+                  <input class="form-control" name="password" type="password"  placeholder="Password">
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <a class="btn btn-warning" href="signup.php" role="button">Sign Up</a>
+                  <button class="btn btn-success" name="login" type="submit">Login</button>
+                <!--  <button class="btn btn-danger" data-dismiss="modal">Close</button> -->
                 </div>
               </form>
             </div>
-            <div class="modal-footer justify-content-center">
-              <a class="btn btn-warning" href="signup.php" role="button">Sign Up</a>
-              <button class="btn btn-success">Login</button>
-            <!--  <button class="btn btn-danger" data-dismiss="modal">Close</button> -->
-            </div>
+
           </div>
         </div>
       </div>
@@ -124,7 +125,7 @@
           <div class="carousel-item">
             <img src="../img/3.JPG" class="d-block img-fluid" alt="Third Slide">
             <div class="carousel-caption">
-              <h3 class="text-light">AC Service & Refrigerant refil</h3>
+              <h3 class="text-light">AC Service & Refrigerant Refill</h3>
             </div>
           </div>
           <div class="carousel-item">

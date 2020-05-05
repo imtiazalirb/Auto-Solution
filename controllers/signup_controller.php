@@ -1,5 +1,5 @@
 <?php
-require_once "../models/database.php";
+require_once "../models/database_crud.php";
 if(isset($_POST["add_users_detail"]))
 {
   insertUser();
