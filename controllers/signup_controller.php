@@ -3,6 +3,7 @@ require_once "../models/database.php";
 if(isset($_POST["add_users_detail"]))
 {
   insertUser();
+  insertLogin();
 }
 
 function insertUser()
@@ -22,7 +23,9 @@ function insertUser()
     $passToDB = password_hash($pass, PASSWORD_DEFAULT);
 		$query="INSERT INTO users_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$passToDB')";
 		execute($query);
+
+    $query="INSERT INTO login VALUES(NULL,'$username','$passToDB','user')";
+		execute($query);
     header("Location: ../index.php");
 	}
-
 ?>

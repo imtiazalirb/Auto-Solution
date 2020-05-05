@@ -237,12 +237,12 @@ include '../controllers/signup_controller.php';
 		var date_input=$('input[name="date"]'); //our date input has the name "date"
 		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
 		date_input.datepicker({
-			format: 'yyyy-dd-mm',
+			format: 'yyyy-mm-dd',
 			container: container,
 			todayHighlight: true,
 			autoclose: true,
       startDate: "1900-01-01",
-      endDate: "2020-31-12",
+      endDate: "2020-12-31",
 		})
 	})
   </script>
