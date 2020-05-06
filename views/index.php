@@ -78,10 +78,30 @@
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input class="form-control" name="password" type="password"  placeholder="Password">
+
+                  <?php
+                      if(@$_GET['Empty']==true)
+                      {
+                  ?>
+                      <div class="alert-light text-danger text-center py-3" ><?php echo $_GET['Empty'] ?></div>
+                  <?php
+                      }
+                  ?>
+
+                  <?php
+                      if(@$_GET['Invalid']==true)
+                      {
+                  ?>
+                      <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid'] ?></div>
+                  <?php
+                      }
+                  ?>
+
                 </div>
+
                 <div class="modal-footer justify-content-center">
                   <a class="btn btn-warning" href="signup.php" role="button">Sign Up</a>
-                  <button class="btn btn-success" name="login" type="submit">Login</button>
+                  <button class="btn btn-success" name="signin" type="submit">Login</button>
                 <!--  <button class="btn btn-danger" data-dismiss="modal">Close</button> -->
                 </div>
               </form>

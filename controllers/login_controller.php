@@ -2,7 +2,13 @@
 session_start();
 require_once "../models/database_connect.php";
 
-if(isset($_POST["login"]))
+
+//session_start();
+$username = $password = $message = $id = $type="";
+
+/* mysqli_real_escape_string() helps prevent sql injection */
+
+if(isset($_POST['signin']))
 {
   if(!empty($_POST['username'])){
 		$username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -16,13 +22,13 @@ if(isset($_POST["login"]))
         header("Location: ../views/admin.php");
       }
 
-  $sqlUserCheck = "SELECT id,username, password,type FROM login WHERE username = '$username';";
+  $sqlUserCheck = "SELECT id,username,password,type FROM login WHERE username = '$username';";
 	//echo $sqlUserCheck;
 	$result = mysqli_query($conn, $sqlUserCheck);
 	$rowCount = mysqli_num_rows($result);
 
   if($rowCount < 1){
-		$message = "User does not exist!";
+		header("location: ../views/index.php?Empty= User does not exist!");
 	}
 
   else{
@@ -34,13 +40,13 @@ if(isset($_POST["login"]))
 			//echo $user_password."======".$uPassInDB;
 			if(password_verify($_POST['password'], $uPassInDB) && $type=='user')
 			{
-				//$_SESSION['user_name'] = $user_name;
+				//$_SESSION['username'] = $username;
 				$message = "Success";
-				$_SESSION['user_id'] = $user_id;
+				$_SESSION['id'] = $id;
 				//echo $_SESSION["$user_id"];
 				header("Location: ../views/user_dashboard.php");
 			}
-			if(password_verify($_POST['user_password'], $uPassInDB) && $type=='employee')
+			if(password_verify($_POST['password'], $uPassInDB) && $type=='employee')
 			{
 				//$_SESSION['user_name'] = $user_name;
 				$message = "Success";
@@ -51,12 +57,11 @@ if(isset($_POST["login"]))
 
 			else
 			{
-				$message = "Wrong Password!";
+				header("location: ../views/index.php?Invalid= Wrong Password");
 			}
 		}
 
 	}
-
 }
 
  ?>
