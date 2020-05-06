@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="styles/mystyle.css">
-  <title>Auto Service</title>
+  <title>Auto Solution</title>
 </head>
 <body>
   <header>
