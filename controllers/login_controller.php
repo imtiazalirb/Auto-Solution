@@ -2,37 +2,37 @@
 session_start();
 require_once "../models/database_connect.php";
 
-
 //session_start();
-$username = $password = $message = $id = $type="";
+$username = $password = $message = $id =$type="";
 
 /* mysqli_real_escape_string() helps prevent sql injection */
-
-if(isset($_POST['signin']))
+if(isset($_POST['login']))
 {
-  if(!empty($_POST['username'])){
+
+	if(!empty($_POST['username'])){
 		$username = mysqli_real_escape_string($conn, $_POST['username']);
-		$username = $_POST['username'];
+		$username= $_POST['username'];
+
 	}
-  if(!empty($_POST['password'])){
+	if(!empty($_POST['password'])){
 		$password = mysqli_real_escape_string($conn, $_POST['password']);
 		$password= $_POST['password'];
 	}
-  if($username=='admin' && $password=='admin'){
-        header("Location: ../views/admin.php");
-      }
+	if($username=='admin' && $password=='admin')
+			{
+				header("Location: ../views/admin.php");
+			}
 
-  $sqlUserCheck = "SELECT id,username,password,type FROM login WHERE username = '$username';";
+	$sqlUserCheck = "SELECT id,username,password,type FROM login WHERE username = '$username';";
 	//echo $sqlUserCheck;
 	$result = mysqli_query($conn, $sqlUserCheck);
 	$rowCount = mysqli_num_rows($result);
 
-  if($rowCount < 1){
-		header("location: ../views/index.php?Empty= User does not exist!");
+	if($rowCount < 1){
+		header("location:../views/index.php?Empty= User does not exist");
 	}
-
-  else{
-		  while($row = mysqli_fetch_assoc($result)){
+	else{
+		while($row = mysqli_fetch_assoc($result)){
 			$uPassInDB = $row['password'];
 			$id = $row['id'] ;
 			$type = $row['type'] ;
@@ -40,28 +40,29 @@ if(isset($_POST['signin']))
 			//echo $user_password."======".$uPassInDB;
 			if(password_verify($_POST['password'], $uPassInDB) && $type=='user')
 			{
-				//$_SESSION['username'] = $username;
+				//$_SESSION['user_name'] = $user_name;
 				$message = "Success";
 				$_SESSION['id'] = $id;
 				//echo $_SESSION["$user_id"];
-				header("Location: ../views/user_dashboard.php");
+				header("location:../views/user_dashboard.php");
 			}
-			if(password_verify($_POST['password'], $uPassInDB) && $type=='employee')
+		  else if(password_verify($_POST['password'], $uPassInDB) && $user_type=='employee')
 			{
 				//$_SESSION['user_name'] = $user_name;
 				$message = "Success";
-				$_SESSION['user_id'] = $user_id;
+				$_SESSION['id'] = $id;
 				//echo $_SESSION["$user_id"];
 				header("Location: doctor.php");
 			}
 
 			else
 			{
-				header("location: ../views/index.php?Invalid= Wrong Password");
+				header("location:../views/index.php?Invalid= Please Enter Correct password ");
 			}
 		}
 
 	}
+
 }
 
- ?>
+?>

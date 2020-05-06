@@ -60,7 +60,10 @@
 
       <!--MODALS LOGIN-->
 
-      <button class="btn btn-success my-sm-2 ml-lg-2" data-toggle="modal" data-target="#loginModal">Login</button>
+
+    <!--  <a class="btn btn-success my-sm-2 ml-lg-2" href="login.php" role="button">Login</a> -->
+
+     <button class="btn btn-success my-sm-2 ml-lg-2" data-toggle="modal" data-target="#loginModal">Login</button>
 
       <div class="modal fade" id="loginModal">
         <div class="modal-dialog modal-dialog-centered-sm modal-sm">
@@ -78,30 +81,33 @@
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input class="form-control" name="password" type="password"  placeholder="Password">
-
-                  <?php
-                      if(@$_GET['Empty']==true)
-                      {
-                  ?>
-                      <div class="alert-light text-danger text-center py-3" ><?php echo $_GET['Empty'] ?></div>
-                  <?php
-                      }
-                  ?>
-
-                  <?php
-                      if(@$_GET['Invalid']==true)
-                      {
-                  ?>
-                      <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid'] ?></div>
-                  <?php
-                      }
-                  ?>
-
                 </div>
+
+
+                                    <?php
+                                        if(@$_GET['Empty']==true)
+                                        {
+                                    ?>
+                                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Empty'] ?></div>
+                                    <?php
+                                        }
+                                    ?>
+
+
+                                    <?php
+                                        if(@$_GET['Invalid']==true)
+                                        {
+                                    ?>
+                                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid'] ?></div>
+                                    <?php
+                                        }
+                                    ?>
+
+
 
                 <div class="modal-footer justify-content-center">
                   <a class="btn btn-warning" href="signup.php" role="button">Sign Up</a>
-                  <button class="btn btn-success" name="signin" type="submit">Login</button>
+                  <button class="btn btn-success" name="login" type="submit">Login</button>
                 <!--  <button class="btn btn-danger" data-dismiss="modal">Close</button> -->
                 </div>
               </form>
