@@ -18,10 +18,10 @@ if(isset($_POST['login']))
 		$password= $_POST['password'];
 	}
 	if($username=='admin' && $password=='admin')
-				{
-					header("location:../views/admin.php");
-				}
-	else {
+		{
+			header("location:../views/admin_dashboard.php");
+		}
+	else{
 		$sqlUserCheck = "SELECT id,username,password,type FROM login WHERE username = '$username';";
 		//echo $sqlUserCheck;
 		$result = mysqli_query($conn, $sqlUserCheck);
@@ -31,7 +31,6 @@ if(isset($_POST['login']))
 			header("location:../views/index.php?Empty= User does not exist");
 	    exit();
 		}
-
 			else {
 				while($row = mysqli_fetch_assoc($result)){
 					$uPassInDB = $row['password'];
@@ -53,7 +52,7 @@ if(isset($_POST['login']))
 						$message = "Success";
 						$_SESSION['id'] = $id;
 						//echo $_SESSION["$user_id"];
-						header("Location: doctor.php");
+						header("location:../views/employee_dashboard.php);
 					}
 
 					else
