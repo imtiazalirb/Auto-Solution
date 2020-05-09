@@ -5,74 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/bootstrap-datepicker.min.js">
   <link rel="stylesheet" href="styles/mystyle.css">
-  <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-  <title>Sign Up</title>
+  <title>Auto Service</title>
 </head>
 <body>
   <header>
     <div class="mynav">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand mb-2" href="">Auto Solution</a>
+      <a class="navbar-brand mb-2" href="user_dashboard.php">Auto Solution</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link disabled" href="../index.php">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Our Services
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item disabled" href="#">Car Service</a>
-              <a class="dropdown-item disabled" href="#">Dent Paint</a>
-              <a class="dropdown-item disabled" href="#">Cleaning</a>
-              <a class="dropdown-item disabled" href="#">Wheel Care</a>
-              <a class="dropdown-item disabled" href="#">AC Service</a>
-              <a class="dropdown-item disabled" href="#">Nano Coating</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item disabled" href="#">Request a quote</a>
-            </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="admin_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="request_quote.php">Request a quote</a>
+            <a class="nav-link" href="admin_quotation_management.php">Quotation Requests</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="our_products.php">Our Products</a>
+            <a class="nav-link" href="admin_employee_management.php">Employees Management</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="contact_us.php">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="about_us.php">About Us</a>
+            <a class="nav-link" href="admin_customer_management.php">Customer Management</a>
           </li>
         </ul>
 
-        <div class="nav-form">
-          <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
+      <!--LOGOUT BUTTON-->
+
+      <button class="btn btn-danger my-sm-2 ml-lg-2" data-toggle="modal" data-target="">Logout</button>
      </div>
     </nav>
   </div>
-</heade
+</header>
 
 <!--SIGNUP FORM-->
 <?php
-include '../controllers/signup_controller.php';
+include '../controllers/employee_signup_controller.php';
 ?>
 
-<h3 class="display-5 text-center my-4">Membership Registration Form</h3>
+<h3 class="display-5 text-center my-4">Employee Registration Form</h3>
 <div class="container">
 
-  <form class="needs-validation" method="post" action="../controllers/signup_controller.php" enctype="multipart/form-data" novalidate>
+  <form class="needs-validation" method="post" action="../controllers/employee_signup_controller.php" enctype="multipart/form-data" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
@@ -199,8 +176,8 @@ include '../controllers/signup_controller.php';
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" name="add_users_detail" type="submit">Submit</button>
-  <a class="btn btn-danger" href="../index.php" role="button">Cancel</a>
+  <button class="btn btn-primary" name="add_employee_detail" type="submit">Submit</button>
+  <a class="btn btn-danger" href="../views/admin_dashboard.php" role="button">Cancel</a>
 </form>
 
 <script>

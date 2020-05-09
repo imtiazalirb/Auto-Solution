@@ -106,7 +106,7 @@
 
 
                 <div class="modal-footer justify-content-center">
-                  <a class="btn btn-warning" href="signup.php" role="button">Sign Up</a>
+                  <a class="btn btn-warning" href="customer_signup.php" role="button">Sign Up</a>
                   <button class="btn btn-success" name="login" type="submit">Login</button>
                 <!--  <button class="btn btn-danger" data-dismiss="modal">Close</button> -->
                 </div>

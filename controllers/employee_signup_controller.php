@@ -1,12 +1,12 @@
 <?php
 require_once "../models/database_crud.php";
-if(isset($_POST["add_users_detail"]))
+if(isset($_POST["add_employee_detail"]))
 {
-  insertUser();
+  insertEmployee();
   insertLogin();
 }
 
-function insertUser()
+function insertEmployee()
 	{
 		$first_name=$_POST["first_name"];
 		$last_name=$_POST["last_name"];
@@ -21,11 +21,11 @@ function insertUser()
     $username=$_POST["username"];
     $pass=$_POST["password"];
     $passToDB = password_hash($pass, PASSWORD_DEFAULT);
-		$query="INSERT INTO users_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$passToDB')";
+		$query="INSERT INTO employees_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$passToDB')";
 		execute($query);
 
-    $query="INSERT INTO login VALUES(NULL,'$username','$passToDB','user')";
+    $query="INSERT INTO login VALUES(NULL,'$username','$passToDB','employee')";
 		execute($query);
-    header("Location: ../index.php");
+    header("location:../views/admin_dashboard.php");
 	}
 ?>
