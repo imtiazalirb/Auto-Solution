@@ -11,7 +11,6 @@ if(isset($_POST['login']))
 	if(!empty($_POST['username'])){
 		$username = mysqli_real_escape_string($conn, $_POST['username']);
 		$username= $_POST['username'];
-
 	}
 	if(!empty($_POST['password'])){
 		$password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -29,7 +28,6 @@ if(isset($_POST['login']))
 
 		if($rowCount < 1){
 			header("location:../views/index.php?Empty= User does not exist");
-	    exit();
 		}
 			else {
 				while($row = mysqli_fetch_assoc($result)){
@@ -49,15 +47,14 @@ if(isset($_POST['login']))
 				  else if(password_verify($_POST['password'], $uPassInDB) && $type=='employee')
 					{
 						$_SESSION['username'] = $username;
-						$message = "Success";
+						//$message = "Success";
 						$_SESSION['id'] = $id;
 						//echo $_SESSION["$user_id"];
-						header("location:../views/employee_dashboard.php);
+						header("location:../views/employee_dashboard.php");
 					}
-
 					else
 					{
-						header("location:../views/index.php?Invalid= Please Enter Correct password ");
+						header("location:../views/index.php?Invalid= Please Enter Correct password");
 		        exit();
 					}
 			}

@@ -23,16 +23,13 @@
             <a class="nav-link" href="admin.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="user_cars.php">Employee List</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="user_service_car.php">Quotation Requests</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="user_service_history.php">Employees</a>
+            <a class="nav-link" href="user_service_history.php">Employees Management</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="user_profile.php">Customers</a>
+            <a class="nav-link" href="user_profile.php">Customer Management</a>
           </li>
         </ul>
 
