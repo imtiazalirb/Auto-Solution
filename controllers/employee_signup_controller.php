@@ -14,6 +14,8 @@ function insertEmployee()
 		$gender=$_POST["gender"];
 		$email=$_POST["email"];
     $phone=$_POST["phone"];
+    $designation=$_POST["designation"];
+    $salary=$_POST["salary"];
     $street=$_POST["street"];
     $city=$_POST["city"];
     $state=$_POST["state"];
@@ -21,7 +23,7 @@ function insertEmployee()
     $username=$_POST["username"];
     $pass=$_POST["password"];
     $passToDB = password_hash($pass, PASSWORD_DEFAULT);
-		$query="INSERT INTO employees_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$passToDB')";
+		$query="INSERT INTO employees_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$designation','$salary','$street','$city','$state','$zip','$username','$passToDB')";
 		execute($query);
 
     $query="INSERT INTO login VALUES(NULL,'$username','$passToDB','employee')";
