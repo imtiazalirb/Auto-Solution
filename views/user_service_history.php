@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include "../controllers/session.php";
+ ?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,6 +40,8 @@
         </ul>
 
       <!--LOGOUT BUTTON-->
+
+      <h5 class="my-sm-2 mr-lg-2">Welcome, <?php echo $username;  ?></h5>
 
       <button class="btn btn-danger my-sm-2 ml-lg-2" data-toggle="modal" data-target="">Logout</button>
      </div>
