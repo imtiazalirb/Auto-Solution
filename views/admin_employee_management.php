@@ -42,8 +42,10 @@
 </header>
 
 <!--BUTTONS-->
-<div class="container">
-  <a class="btn btn-success float-right my-3" href="employee_signup.php" role="button">Add Employee</a>
+<div class="bg-secondary">
+  <a class="btn btn-success float-middle my-3 ml-3" href="employee_signup.php" role="button">Assign Employee</a>
+  <a class="btn btn-warning float-middle my-3 ml-3" href="" role="button">Edit Employee Detail</a>
+
 </div>
 
 
