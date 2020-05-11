@@ -112,6 +112,29 @@ include '../controllers/employee_signup_controller.php';
     </div>
   </div>
 
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Salary</label>
+      <input type="number" name="salary" class="form-control" id="validationCustom01" placeholder="Salary" required>
+      <div class="invalid-feedback">
+        PLease provide a valid salary
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <label for="validationCustom04">Designation</label>
+        <select name="designation" class="custom-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose</option>
+          <option>Manager</option>
+          <option>Service Engineer</option>
+          <option>Mechanic</option>
+          <option>Other</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+  </div>
+
 
   <div class="form-row">
     <div class="col-md-10 mb-3">
