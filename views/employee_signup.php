@@ -84,7 +84,7 @@ include '../controllers/employee_signup_controller.php';
          <option>Other</option>
        </select>
        <div class="invalid-feedback">
-         Please select a valid state.
+         Please select a valid gender
        </div>
      </div>
   </div>
