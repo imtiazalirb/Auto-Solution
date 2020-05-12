@@ -11,7 +11,7 @@ else
 {
   header('location: ../views/index.php');
 }
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
