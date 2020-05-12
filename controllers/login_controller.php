@@ -38,9 +38,11 @@ if(isset($_POST['login']))
 					//echo $user_password."======".$uPassInDB;
 					if(password_verify($_POST['password'], $uPassInDB) && $type=='user')
 					{
-						$_SESSION['username'] = $username;
+					//	$_SESSION['username'] = $username;
 						//$message = "Success";
 						$_SESSION['id'] = $id;
+						$_SESSION['username'] = $username;
+						$_SESSION['type'] = "user";
 						//echo $_SESSION["$user_id"];
 						header("location:../views/user_dashboard.php");
 					}
@@ -49,6 +51,7 @@ if(isset($_POST['login']))
 						$_SESSION['username'] = $username;
 						//$message = "Success";
 						$_SESSION['id'] = $id;
+						$_SESSION['type'] = "employee";
 						//echo $_SESSION["$user_id"];
 						header("location:../views/employee_dashboard.php");
 					}

@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if(isset($_SESSION['type']))
+{
+	if($_SESSION['type'] = 'user')
+	{
+		header('location:../views/user_dashboard.php');
+	}
+	else if($_SESSION['type'] = 'employee')
+	{
+		header('location:../views/employee_dashboard.php');
+	}
+}
+?>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -112,7 +126,6 @@
                 </div>
               </form>
             </div>
-
           </div>
         </div>
       </div>
