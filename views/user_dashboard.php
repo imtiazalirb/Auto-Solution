@@ -1,5 +1,16 @@
 <?php
 session_start();
+if(isset($_SESSION['type']))
+{
+	if($_SESSION['type'] != 'user')
+	{
+		header('location:../views/employee_dashboard.php');
+	}
+}
+else
+{
+  header('location: ../views/index.php');
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
