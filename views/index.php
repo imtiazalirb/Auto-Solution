@@ -2,11 +2,11 @@
 session_start();
 if(isset($_SESSION['type']))
 {
-	if($_SESSION['type'] = 'user')
+	if($_SESSION['type'] == 'user')
 	{
 		header('location:../views/user_dashboard.php');
 	}
-	else if($_SESSION['type'] = 'employee')
+	if($_SESSION['type'] == 'employee')
 	{
 		header('location:../views/employee_dashboard.php');
 	}
