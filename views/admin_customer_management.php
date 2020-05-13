@@ -1,3 +1,24 @@
+<?php
+session_start();
+if(isset($_SESSION['type']))
+{
+	if($_SESSION['type'] != 'admin')
+	{
+		if($_SESSION['type'] == 'user')
+		{
+			header('location:../views/user_dashboard.php');
+		}
+		if($_SESSION['type'] == 'employee')
+		{
+			header('location:../views/employee_dashboard.php');
+		}
+	}
+}
+else
+{
+  header('location:../views/index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +63,9 @@
 
       <!--LOGOUT BUTTON-->
 
-      <button class="btn btn-danger my-sm-2 ml-lg-2" data-toggle="modal" data-target="">Logout</button>
+      <h5 class="my-sm-2 mr-lg-2">Welcome, <?php echo $_SESSION['username'];?></h5>
+
+      <a class="btn btn-danger my-sm-2 ml-lg-2 "href="../controllers/logout.php">Logout</a>
      </div>
     </nav>
   </div>

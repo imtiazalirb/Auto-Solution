@@ -1,3 +1,24 @@
+<?php
+session_start();
+if(isset($_SESSION['type']))
+{
+	if($_SESSION['type'] != 'admin')
+	{
+		if($_SESSION['type'] == 'user')
+		{
+			header('location:../views/user_dashboard.php');
+		}
+		if($_SESSION['type'] == 'employee')
+		{
+			header('location:../views/employee_dashboard.php');
+		}
+	}
+}
+else
+{
+  header('location:../views/index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
