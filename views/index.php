@@ -10,6 +10,10 @@ if(isset($_SESSION['type']))
 	{
 		header('location:../views/employee_dashboard.php');
 	}
+	if($_SESSION['type'] == 'admin')
+	{
+		header('location:../views/admin_dashboard.php');
+	}
 }
 ?>
  <!DOCTYPE html>
