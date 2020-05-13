@@ -25,8 +25,15 @@
           <li class="nav-item">
             <a class="nav-link" href="admin_quotation_management.php">Quotation Requests</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="admin_employee_management.php">Employees Management</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Employee Management
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">All Employee</a>
+              <a class="dropdown-item" href="employee_signup.php">Assign Employee</a>
+              <a class="dropdown-item" href="#">Edit Employee Detail</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="admin_customer_management.php">Customer Management</a>
@@ -42,11 +49,6 @@
 </header>
 
 <!--BUTTONS-->
-<div class="bg-secondary">
-  <a class="btn btn-success float-middle my-3 ml-3" href="employee_signup.php" role="button">Assign Employee</a>
-  <a class="btn btn-warning float-middle my-3 ml-3" href="" role="button">Edit Employee Detail</a>
-
-</div>
 
 
 <div style="margin-top:50px"></div>
