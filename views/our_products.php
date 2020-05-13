@@ -24,7 +24,7 @@ if(isset($_SESSION['type']))
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="styles/mystyle.css">
-  <title>Document</title>
+  <title>Our Products</title>
 </head>
 <body>
   <header>
