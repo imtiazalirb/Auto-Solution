@@ -18,6 +18,8 @@ if(isset($_POST['login']))
 	}
 	if($username=='admin' && $password=='admin')
 		{
+			$_SESSION['username'] = "admin";
+			$_SESSION['type'] = "admin";
 			header("location:../views/admin_dashboard.php");
 		}
 	else{
