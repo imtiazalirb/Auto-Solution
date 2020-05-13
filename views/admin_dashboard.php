@@ -35,7 +35,7 @@
 
       <!--LOGOUT BUTTON-->
 
-      <button class="btn btn-danger my-sm-2 ml-lg-2" data-toggle="modal" data-target="">Logout</button>
+        <a class="btn btn-danger my-sm-2 ml-lg-2 "href="../controllers/logout.php">Logout</a>
      </div>
     </nav>
   </div>
