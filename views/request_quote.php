@@ -135,11 +135,301 @@ if(isset($_SESSION['type']))
   </div>
 </header>
 
+<!--FORM-->
+
+<?php
+
+?>
+
+<h3 class="display-5 text-center my-4">Quotation Form</h3>
+<div class="container">
+
+  <form class="needs-validation" method="post" action="../controllers/customer_signup_controller.php" enctype="multipart/form-data" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">First name</label>
+      <input type="text" name="first_name" class="form-control" id="validationCustom01" placeholder="First name" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" name="last_name" class="form-control" id="validationCustom02" placeholder="Last name" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div>
+
+	<div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Email</label>
+      <input type="email" name="email" class="form-control" id="validationCustom01" placeholder="Email" required>
+      <small id="phonedHelpInline" class="text-muted">
+        Ex: abc@example.com
+      </small>
+      <div class="invalid-feedback">
+        PLease provide a valid email
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Phone Number</label>
+      <input type="tel" name="phone" class="form-control" id="validationCustom02" placeholder="Phone Number" pattern="[/+][0-9]{13,}" required>
+      <small id="phonedHelpInline" class="text-muted">
+        Ex: +8801710000000
+      </small>
+      <div class="invalid-feedback">
+        Please provide a valid phone number
+      </div>
+    </div>
+  </div>
+
+	<div class="form-row ">
+		<div class="col-md-4 mb-3">
+        <label for="validationCustom04">Car Make</label>
+        <select name="gender" class="custom-select" id="validationCustom04" required>
+          <option selected disabled value="">Car Make</option>
+          <option>AUDI</option>
+          <option>BMW</option>
+          <option>Cadillac</option>
+					<option>Citroën</option>
+					<option>Daewoo</option>
+					<option>Daihatsu</option>
+					<option>Datsun</option>
+					<option>Dodge</option>
+					<option>Ferrari</option>
+					<option>Fiat</option>
+					<option>Ford</option>
+					<option>Foton</option>
+					<option>Honda</option>
+					<option>Hyundai</option>
+					<option>Infiniti</option>
+					<option>Isuzu</option>
+					<option>IVECO</option>
+					<option>jaguar</option>
+					<option>Jeep</option>
+					<option>KIA</option>
+					<option>Land Rover</option>
+					<option>Lexus</option>
+					<option>Mahindra</option>
+					<option>Mazda</option>
+					<option>Mercedes</option>
+					<option>MG</option>
+					<option>Mini</option>
+					<option>Mitsubishi</option>
+					<option>Nissan</option>
+					<option>OPEL</option>
+					<option>Peugeot</option>
+					<option>Porsche</option>
+					<option>Proton</option>
+					<option>Renault</option>
+					<option>Saab</option>
+					<option>Seat</option>
+					<option>Ssangyong</option>
+					<option>Subaru</option>
+					<option>Suzuki</option>
+					<option>Tata</option>
+					<option>Toyota</option>
+					<option>Volvo</option>
+					<option>Volkswagen</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a car model
+        </div>
+      </div>
+			<div class="col-md-4 mb-3">
+	 		 <label for="validationCustom03">Model</label>
+	 		 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Model" required>
+	 		 <div class="invalid-feedback">
+	 			 Please provide a car model.
+	 		 </div>
+	 	 </div>
+  </div>
+
+	<div class="form-row">
+		<div class="col-md-4 mb-3">
+		 <label for="validationCustom03">Trim Level</label>
+		 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Trim Level" required>
+		 <div class="invalid-feedback">
+			 Please provide a trim level.
+		 </div>
+	 </div>
+	 <div class="col-md-4 mb-3">
+		<label for="validationCustom03">Year</label>
+		<input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Year" required>
+		<div class="invalid-feedback">
+			Please provide a year.
+		</div>
+	</div>
+  </div>
+
+	<div class="form-row">
+		<div class="col-md-4 mb-3">
+		 <label for="validationCustom03">Registration Number</label>
+		 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Registration Number" required>
+		 <div class="invalid-feedback">
+			 Please provide registration number.
+		 </div>
+	 </div>
+	 <div class="col-md-4 mb-3">
+		<label for="validationCustom03">Engine Number</label>
+		<input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Engine Number" required>
+		<div class="invalid-feedback">
+			Please provide engine number
+		</div>
+	</div>
+  </div>
+
+	<p>What service do you need ?</p>
+
+	<div class="for-row mb-3">
+		<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">Major service</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Minor Service</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">62 Point check</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Battery</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Clutch</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Cambelt</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Engine</label>
+</div>
+</div>
 
 
+<div class="form-row mb-3">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Transmission</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Axle</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Brakes</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Suspension</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Body Dent</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Paint</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Battery</label>
+</div>
+</div>
+
+<div class="form-row">
+	<div class="col-md-8 mb-3">
+	 <label for="validationCustom03">Anything Else we should know?</label>
+	 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Anything Else we should know?" required>
+	 <div class="invalid-feedback">
+		 Please provide engine number
+	 </div>
+	</div>
+</div>
+
+
+	<div class="form-row ">
+		<div class="col-md-4 mb-3">
+				<label for="validationCustom04">Select Branch</label>
+				<select name="gender" class="custom-select" id="validationCustom04" required>
+					<option selected disabled value="">Select Branch</option>
+					<option>Dhaka</option>
+					<option>Chittagong</option>
+				</select>
+				<div class="invalid-feedback">
+					Please select a car model
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+				<label class="form-check-label" for="invalidCheck">
+					Agree to terms and conditions
+				</label>
+				<div class="invalid-feedback">
+					You must agree before submitting.
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-primary" name="add_customer_detail" type="submit">Submit</button>
+		<a class="btn btn-danger" href="../index.php" role="button">Cancel</a>
+	</form>
+
+
+	<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+	    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	    var forms = document.getElementsByClassName('needs-validation');
+	    // Loop over them and prevent submission
+	    var validation = Array.prototype.filter.call(forms, function(form) {
+	      form.addEventListener('submit', function(event) {
+	        if (form.checkValidity() === false) {
+	          event.preventDefault();
+	          event.stopPropagation();
+	        }
+	        form.classList.add('was-validated');
+	      }, false);
+	    });
+	  }, false);
+	})();
+	</script>
+	</div>
+	  <div style="margin-top:50px"></div>
+	  <script src="../js/jquery-slim.min.js"></script>
+	  <script src="../js/popper.min.js"></script>
+	  <script src="../js/bootstrap.min.js"></script>
+	  <script src="../js/bootstrap-datepicker.min.js"></script>
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	  <script>
+	  $(document).ready(function(){
+			var date_input=$('input[name="date"]'); //our date input has the name "date"
+			var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+			date_input.datepicker({
+				format: 'yyyy-mm-dd',
+				container: container,
+				todayHighlight: true,
+				autoclose: true,
+	      startDate: "1900-01-01",
+	      endDate: "2020-12-31",
+			})
+		})
+	  </script>
 <div style="margin-top:50px"></div>
-<script src="../js/jquery-slim.min.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
