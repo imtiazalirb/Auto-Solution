@@ -192,7 +192,7 @@ if(isset($_SESSION['type']))
           <div class="carousel-item">
             <img src="../img/7.JPG" class="d-block img-fluid" alt="Seventh Slide">
             <div class="carousel-caption">
-              <h3>Wheel alignment</h3>
+              <h3>Wheel Alignment</h3>
             </div>
           </div>
         </div>
