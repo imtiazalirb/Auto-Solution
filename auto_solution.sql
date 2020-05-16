@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2020 at 09:32 PM
+-- Generation Time: May 16, 2020 at 07:57 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -50,6 +50,7 @@ CREATE TABLE `employees_detail` (
 --
 
 INSERT INTO `employees_detail` (`id`, `first_name`, `last_name`, `birth_date`, `gender`, `email`, `phone`, `designation`, `salary`, `street`, `city`, `state`, `zip`, `username`, `password`) VALUES
+(3, 'Abdus', 'Samad', '1988-05-03', 'Male', 'samad@gmail.com', '+8801915647629', 'Mechanic', 30000, '129/A/12 Basundhara Abasik', 'Dhaka', 'Dhaka', '1229', 'samad', '$2y$10$uT0xLaCOPxejk.uphmTdOOyIJBgodsMoKTHZW1l.i33jT0r9bEo6C'),
 (2, 'Zulhas', 'Molla', '1981-07-16', 'Male', 'zulhas@gmail.com', '+8801749468971', 'Service Engineer', 20000, '122/2 Monipur, Mirpur-2', 'Dhaka', 'Dhaka', '1216', 'zulhas', '$2y$10$eXCswhWCyUtkCpizlW38fucS2ZPnrmirhzTqXHa4rg/VSTnNXBgie');
 
 -- --------------------------------------------------------
@@ -71,7 +72,9 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`id`, `username`, `password`, `type`) VALUES
 (2, 'imtiaz', '$2y$10$ZLPWvX81rEOZQSo26Iv6Keruinmok5eWh7nZKXdbduMuYinPVegbK', 'user'),
-(5, 'zulhas', '$2y$10$eXCswhWCyUtkCpizlW38fucS2ZPnrmirhzTqXHa4rg/VSTnNXBgie', 'employee');
+(5, 'zulhas', '$2y$10$eXCswhWCyUtkCpizlW38fucS2ZPnrmirhzTqXHa4rg/VSTnNXBgie', 'employee'),
+(6, 'shafat', '$2y$10$aRWly25zdpo4uD.NDzy77uSIN9y8vgDOsEiHikiKEETVTK.JDai6a', 'user'),
+(7, 'samad', '$2y$10$uT0xLaCOPxejk.uphmTdOOyIJBgodsMoKTHZW1l.i33jT0r9bEo6C', 'employee');
 
 -- --------------------------------------------------------
 
@@ -100,7 +103,8 @@ CREATE TABLE `users_detail` (
 --
 
 INSERT INTO `users_detail` (`id`, `first_name`, `last_name`, `birth_date`, `gender`, `email`, `phone`, `street`, `city`, `state`, `zip`, `username`, `password`) VALUES
-(2, 'Imtiaz', 'Ali', '1996-07-09', 'Male', 'imtiazali4090@gmail.com', '+8801625036306', 'H-111, Road-4, Sangbadik Abasik Elaka', 'Dhaka', 'Dhaka', '1216', 'imtiaz', '$2y$10$ZLPWvX81rEOZQSo26Iv6Keruinmok5eWh7nZKXdbduMuYinPVegbK');
+(2, 'Imtiaz', 'Ali', '1996-07-09', 'Male', 'imtiazali4090@gmail.com', '+8801625036306', 'H-111, Road-4, Sangbadik Abasik Elaka', 'Dhaka', 'Dhaka', '1216', 'imtiaz', '$2y$10$ZLPWvX81rEOZQSo26Iv6Keruinmok5eWh7nZKXdbduMuYinPVegbK'),
+(4, 'Shafayat Ul', 'Islam', '1996-11-01', 'Male', 'shafat46r@gmail.com', '+88017198287580', '135/5 Sangbadik R/A, Mirpur-11', 'Dhaka', 'Dhaka', '1216', 'shafat', '$2y$10$aRWly25zdpo4uD.NDzy77uSIN9y8vgDOsEiHikiKEETVTK.JDai6a');
 
 --
 -- Indexes for dumped tables
@@ -137,19 +141,19 @@ ALTER TABLE `users_detail`
 -- AUTO_INCREMENT for table `employees_detail`
 --
 ALTER TABLE `employees_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users_detail`
 --
 ALTER TABLE `users_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
