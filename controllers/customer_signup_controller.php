@@ -28,4 +28,11 @@ function insertUser()
 		execute($query);
     header("Location: ../views/index.php");
 	}
+
+  function getAllUser()
+  {
+    $query ="SELECT * FROM users_detail ORDER BY Id ASC";
+    $users = get($query);
+    return $users;
+  }
 ?>
