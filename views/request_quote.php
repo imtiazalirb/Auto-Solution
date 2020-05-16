@@ -144,7 +144,7 @@ if(isset($_SESSION['type']))
 <h3 class="display-5 text-center my-4">Quotation Form</h3>
 <div class="container">
 
-  <form class="needs-validation" method="post" action="../controllers/customer_signup_controller.php" enctype="multipart/form-data" novalidate>
+  <form class="needs-validation" method="post" action="" enctype="multipart/form-data" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
