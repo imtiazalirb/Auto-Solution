@@ -30,10 +30,10 @@ $employees = getAllEmployees();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
- 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />  
+ 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
   <link rel="stylesheet" href="styles/mystyle.css">
   <title>Auto Service</title>
 </head>
@@ -79,11 +79,8 @@ $employees = getAllEmployees();
   </div>
 </header>
 
-<!--TABLe\E-->
-
-
-<div class="container">
-<table class="table table-striped my-5" id="employee_data">
+<!--TABLE-->
+<table class="table table-striped my-3" id="employee_data">
     <thead>
       <tr>
         <th>Id</th>
@@ -97,6 +94,7 @@ $employees = getAllEmployees();
         <th>Street</th>
         <th>City</th>
         <th>State</th>
+				<th>Zip</th>
         <th>Username</th>
       </tr>
     </thead>
@@ -115,12 +113,12 @@ $employees = getAllEmployees();
 						echo "<th>".$employee["street"]."</th>";
 						echo "<th>".$employee["city"]."</th>";
 						echo "<th>".$employee["state"]."</th>";
+						echo "<th>".$employee["zip"]."</th>";
 						echo "<th>".$employee["username"]."</th>";
 					echo "</tr>";
 				}
 			?>
   </table>
-</div>
 
 <div style="margin-top:50px"></div>
 <script src="../js/jquery-slim.min.js"></script>
