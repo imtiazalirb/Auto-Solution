@@ -30,4 +30,12 @@ function insertEmployee()
 		execute($query);
     header("location:../views/admin_dashboard.php");
 	}
+
+  function getAllEmployees()
+	{
+		$query ="SELECT * FROM employees_detail ORDER BY Id ASC";
+		$employees = get($query);
+		return $employees;
+	}
+
 ?>
