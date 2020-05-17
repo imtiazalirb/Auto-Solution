@@ -61,7 +61,7 @@ $employees = getAllEmployees();
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="admin_all_employee.php">All Employee</a>
               <a class="dropdown-item" href="employee_signup.php">Assign Employee</a>
-              <a class="dropdown-item" href="#">Edit Employee Detail</a>
+              <a class="dropdown-item" href="admin_edit_employee.php">Edit Employee Detail</a>
             </div>
           </li>
           <li class="nav-item">
