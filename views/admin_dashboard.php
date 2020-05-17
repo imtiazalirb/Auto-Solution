@@ -83,12 +83,14 @@ require_once ('../controllers/customer_signup_controller.php');
     <div class="card-body">
       <h4 class="card-title text-primary text-center">Employees</h4>
       <p class="text-center text-primary"><?php echo $employee;?></p>
+			<a class="btn btn-outline-primary btn-block" href="admin_all_employee.php" role="button">See All Employees</a>
     </div>
   </div>
   <div class="card border-success">
     <div class="card-body">
-      <h4 class="card-title text-success text-center">Customers</h4>
+      <h4 class="card-title text-success text-center">Registred Users</h4>
       <p class="text-center text-success"><?php echo $customer;?></p>
+			<a class="btn btn-outline-success btn-block" href="admin_all_userview.php" role="button">See All Users</a>
     </div>
   </div>
   <div class="card border-info">
