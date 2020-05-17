@@ -196,7 +196,8 @@ $employee=getEmployee($eid);
      </div>
    </div>
    <button class="btn btn-success" name="edit_employee_detail" type="submit">Save Changes</button>
-   <a class="btn btn-danger" href="../views/admin_dashboard.php" role="button">Cancel</a>
+	 <button class="btn btn-danger" name="delete_employee_detail" type="submit">Delete Employee/button>
+   <a class="btn btn-warning" href="../views/admin_dashboard.php" role="button">Cancel</a>
  </form>
 
  <script>
