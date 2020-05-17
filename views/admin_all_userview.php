@@ -48,7 +48,7 @@ $users = getAllUser();
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="admin_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -59,12 +59,12 @@ $users = getAllUser();
               Employee Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">All Employee</a>
+              <a class="dropdown-item" href="admin_all_employee.php">All Employee</a>
               <a class="dropdown-item" href="employee_signup.php">Assign Employee</a>
               <a class="dropdown-item" href="#">Edit Employee Detail</a>
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="admin_customer_management.php">Customer Management</a>
           </li>
         </ul>
