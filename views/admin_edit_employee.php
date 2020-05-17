@@ -22,7 +22,7 @@ else
 <?php
 require '../controllers/employee_signup_controller.php';
 $employees = getAllEmployees();
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,11 +116,10 @@ $employees = getAllEmployees();
 						echo "<th>".$employee["state"]."</th>";
 						echo "<th>".$employee["zip"]."</th>";
 						echo "<th>".$employee["username"]."</th>";
-            echo '<th><a href="edit_employee.php?id='.$employee["id"].'" class="btn btn-warning">Edit</a></th>';
-						echo '<th><button class="btn btn-danger" name="delete_employee_detail" type="submit">Delete</button></th>';
+            echo '<th><a href="edit_employee.php?id='.$employee["id"].'" class="btn btn-warning">Edit/Delete</a></th>';
 					echo "</tr>";
 				}
-			?>
+				?>
   </table>
 
 <div style="margin-top:50px"></div>
