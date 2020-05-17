@@ -88,9 +88,16 @@ require_once ('../controllers/customer_signup_controller.php');
   </div>
   <div class="card border-success">
     <div class="card-body">
-      <h4 class="card-title text-success text-center">Registred Users</h4>
+      <h4 class="card-title text-success text-center">Users</h4>
       <p class="text-center text-success"><?php echo $customer;?></p>
 			<a class="btn btn-outline-success btn-block" href="admin_all_userview.php" role="button">See All Users</a>
+    </div>
+  </div>
+	<div class="card border-secondary">
+    <div class="card-body">
+      <h5 class="card-title text-secondary text-center">Quotation Requests</h5>
+      <p class="text-center text-secondary">	</p>
+			
     </div>
   </div>
   <div class="card border-info">
