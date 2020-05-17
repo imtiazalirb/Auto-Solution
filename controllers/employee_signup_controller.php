@@ -77,9 +77,10 @@ function insertEmployee()
 
   function deleteEmployee()
   {
-    $query="DELETE from employees_detail WHERE id=$id";
+    $id=$_POST["id"];
+    $query="DELETE from employees_detail WHERE id='$id'";
 		echo $query;
 		execute($query);
-		header("Location:../views/admin_all_employee.php");
+		header("location:../views/admin_all_employee.php");
   }
 ?>
