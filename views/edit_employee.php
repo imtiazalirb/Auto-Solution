@@ -188,7 +188,7 @@ $employee=getEmployee($eid);
      <div class="form-check">
        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
        <label class="form-check-label" for="invalidCheck">
-         Agree to terms and conditions
+         Confirm
        </label>
        <div class="invalid-feedback">
          You must agree before submitting.
@@ -196,7 +196,7 @@ $employee=getEmployee($eid);
      </div>
    </div>
    <button class="btn btn-success" name="edit_employee_detail" type="submit">Save Changes</button>
-	 <button class="btn btn-danger" name="delete_employee_detail" type="submit">Delete Employee/button>
+	 <button class="btn btn-danger" name="delete_employee_detail" type="submit">Delete Employee</button>
    <a class="btn btn-warning" href="../views/admin_dashboard.php" role="button">Cancel</a>
  </form>
 
