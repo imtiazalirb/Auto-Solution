@@ -22,7 +22,7 @@ else
 require_once ('../controllers/employee_signup_controller.php');
 require_once ('../controllers/customer_signup_controller.php');
 	$employee=count(getAllEmployees());
-	//$t_categories=count(getAllUser());
+	$customer=count(getAllUser());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,19 +76,36 @@ require_once ('../controllers/customer_signup_controller.php');
   </div>
 </header>
 
-<div>
-	<table  align="center">
-		<tr>
-			<td>
-				<div class="card">
-				<span class="text-light bg-dark"> Total Employees <br>
-					<?php echo $employee;?>
-				</span>
-				</div>
-			</td>
-		</tr>
-	</table>
+<br>
+<div class="container">
+	<div class="card-deck">
+  <div class="card border-primary">
+    <div class="card-body">
+      <h4 class="card-title text-primary text-center">Employees</h4>
+      <p class="text-center text-primary"><?php echo $employee;?></p>
+    </div>
+  </div>
+  <div class="card border-success">
+    <div class="card-body">
+      <h4 class="card-title text-success text-center">Customers</h4>
+      <p class="text-center text-success"><?php echo $customer;?></p>
+    </div>
+  </div>
+  <div class="card border-info">
+    <div class="card-body">
+      <h4 class="card-title text-info text-center">Registerd Cars</h4>
+      <p class="text-center text-info"></p>
+    </div>
+  </div>
+	<div class="card border-warning">
+		<div class="card-body">
+			<h4 class="card-title text-warning text-center">Service Done</h4>
+			<p class="text-center text-warning"></p>
+		</div>
+	</div>
 </div>
+</div>
+
 
 <div style="margin-top:50px"></div>
 <script src="../js/jquery-slim.min.js"></script>
