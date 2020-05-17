@@ -29,7 +29,7 @@ if(isset($_POST['login']))
 		$rowCount = mysqli_num_rows($result);
 
 		if($rowCount < 1){
-			header("location:../views/index.php?Empty= User does not exist");
+			header("location:../views/index.php?Empty=User does not exist");
 		}
 			else {
 				while($row = mysqli_fetch_assoc($result)){
@@ -59,7 +59,7 @@ if(isset($_POST['login']))
 					}
 					else
 					{
-						header("location:../views/index.php?Invalid= Please Enter Correct password");
+						header("location:../views/index.php?Invalid=Please Enter Correct password");
 		        exit();
 					}
 			}
