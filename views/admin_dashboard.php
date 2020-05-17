@@ -18,6 +18,11 @@ else
 {
   header('location:../views/index.php');
 }
+
+require_once ('../controllers/employee_signup_controller.php');
+require_once ('../controllers/customer_signup_controller.php');
+	$employee=count(getAllEmployees());
+	//$t_categories=count(getAllUser());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,6 +75,20 @@ else
     </nav>
   </div>
 </header>
+
+<div>
+	<table  align="center">
+		<tr>
+			<td>
+				<div class="card">
+				<span class="text-light bg-dark"> Total Employees <br>
+					<?php echo $employee;?>
+				</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
 
 <div style="margin-top:50px"></div>
 <script src="../js/jquery-slim.min.js"></script>
