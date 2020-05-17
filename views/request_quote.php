@@ -285,64 +285,64 @@ if(isset($_SESSION['type']))
 
 	<div class="for-row mb-3">
 		<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Major service">
   <label class="form-check-label" for="inlineCheckbox1">Major service</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Minor service">
   <label class="form-check-label" for="inlineCheckbox2">Minor Service</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">62 Point check</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="62 Point check">
+  <label class="form-check-label" for="inlineCheckbox3">62 Point check</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Battery</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Battery">
+  <label class="form-check-label" for="inlineCheckbox4">Battery</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Clutch</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="Clutch">
+  <label class="form-check-label" for="inlineCheckbox5">Clutch</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Cambelt</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="Cambelt">
+  <label class="form-check-label" for="inlineCheckbox6">Cambelt</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Engine</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="Engine">
+  <label class="form-check-label" for="inlineCheckbox7">Engine</label>
 </div>
 </div>
 
 
 <div class="form-row mb-3">
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Transmission</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="Transmission">
+  <label class="form-check-label" for="inlineCheckbox8">Transmission</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Axle</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="Axle">
+  <label class="form-check-label" for="inlineCheckbox9">Axle</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Brakes</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="Brakes">
+  <label class="form-check-label" for="inlineCheckbox10">Brakes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Suspension</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="Suspension">
+  <label class="form-check-label" for="inlineCheckbox11">Suspension</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Body Dent</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="Body dent">
+  <label class="form-check-label" for="inlineCheckbox12">Body Dent</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Paint</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="Paint">
+  <label class="form-check-label" for="inlineCheckbox13">Paint</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Battery</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="Battery">
+  <label class="form-check-label" for="inlineCheckbox14">Battery</label>
 </div>
 </div>
 

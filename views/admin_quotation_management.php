@@ -46,18 +46,18 @@ else
           <li class="nav-item active">
             <a class="nav-link" href="admin_quotation_management.php">Quotation Requests</a>
           </li>
-          <li class="nav-item dropdown">
+					<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Employee Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">All Employee</a>
+              <a class="dropdown-item" href="admin_all_employee.php">All Employee</a>
               <a class="dropdown-item" href="employee_signup.php">Assign Employee</a>
               <a class="dropdown-item" href="#">Edit Employee Detail</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_customer_management.php">Customer Management</a>
+            <a class="nav-link" href="admin_all_userview.php">Customer Management</a>
           </li>
         </ul>
 

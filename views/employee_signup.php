@@ -46,7 +46,7 @@ else
           <li class="nav-item">
             <a class="nav-link" href="admin_quotation_management.php">Quotation Requests</a>
           </li>
-          <li class="nav-item dropdown active">
+					<li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Employee Management
             </a>
@@ -57,7 +57,7 @@ else
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_customer_management.php">Customer Management</a>
+            <a class="nav-link" href="admin_all_userview.php">Customer Management</a>
           </li>
         </ul>
 

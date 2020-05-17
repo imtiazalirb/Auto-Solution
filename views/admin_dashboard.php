@@ -57,7 +57,7 @@ else
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_all_customer.php">Customer Management</a>
+            <a class="nav-link" href="admin_all_userview.php">Customer Management</a>
           </li>
         </ul>
 
