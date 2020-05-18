@@ -143,6 +143,7 @@ if(isset($_SESSION['type']))
 <script src="../js/bootstrap.min.js"></script>
 
 <!--Section: Contact v.2-->
+<div class="container">
 <section class="mb-6">
 
     <!--Section heading-->
@@ -216,6 +217,9 @@ if(isset($_SESSION['type']))
         </div>
         <!--Grid column-->
     </div>
+
+
+		</div>
 
 </section>
 <!--Section: Contact v.2-->
