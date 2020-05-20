@@ -138,13 +138,14 @@ if(isset($_SESSION['type']))
 <!--FORM-->
 
 <?php
-
+include '../controllers/quote_controller.php';
 ?>
+
 
 <h3 class="display-5 text-center my-4">Quotation Form</h3>
 <div class="container">
 
-  <form class="needs-validation" method="post" action="" enctype="multipart/form-data" novalidate>
+  <form class="needs-validation" method="post" action="../controllers/quote_controller.php" enctype="multipart/form-data" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
@@ -188,7 +189,7 @@ if(isset($_SESSION['type']))
 	<div class="form-row ">
 		<div class="col-md-4 mb-3">
         <label for="validationCustom04">Car Make</label>
-        <select name="gender" class="custom-select" id="validationCustom04" required>
+        <select name="car_make" class="custom-select" id="validationCustom04" required>
           <option selected disabled value="">Car Make</option>
           <option>AUDI</option>
           <option>BMW</option>
@@ -235,12 +236,12 @@ if(isset($_SESSION['type']))
 					<option>Volkswagen</option>
         </select>
         <div class="invalid-feedback">
-          Please select a car model
+          Please select a car make
         </div>
       </div>
 			<div class="col-md-4 mb-3">
 	 		 <label for="validationCustom03">Model</label>
-	 		 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Model" required>
+	 		 <input type="text" name="car_model" class="form-control" id="validationCustom03" placeholder="Model" required>
 	 		 <div class="invalid-feedback">
 	 			 Please provide a car model.
 	 		 </div>
@@ -250,14 +251,14 @@ if(isset($_SESSION['type']))
 	<div class="form-row">
 		<div class="col-md-4 mb-3">
 		 <label for="validationCustom03">Trim Level</label>
-		 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Trim Level" required>
+		 <input type="text" name="trim" class="form-control" id="validationCustom03" placeholder="Trim Level" required>
 		 <div class="invalid-feedback">
 			 Please provide a trim level.
 		 </div>
 	 </div>
 	 <div class="col-md-4 mb-3">
 		<label for="validationCustom03">Year</label>
-		<input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Year" required>
+		<input type="text" name="year" class="form-control" id="validationCustom03" placeholder="Year" required>
 		<div class="invalid-feedback">
 			Please provide a year.
 		</div>
@@ -267,14 +268,14 @@ if(isset($_SESSION['type']))
 	<div class="form-row">
 		<div class="col-md-4 mb-3">
 		 <label for="validationCustom03">Registration Number</label>
-		 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Registration Number" required>
+		 <input type="text" name="registration_no" class="form-control" id="validationCustom03" placeholder="Registration Number" required>
 		 <div class="invalid-feedback">
 			 Please provide registration number.
 		 </div>
 	 </div>
 	 <div class="col-md-4 mb-3">
 		<label for="validationCustom03">Engine Number</label>
-		<input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Engine Number" required>
+		<input type="text" name="engine_no" class="form-control" id="validationCustom03" placeholder="Engine Number" required>
 		<div class="invalid-feedback">
 			Please provide engine number
 		</div>
@@ -285,31 +286,31 @@ if(isset($_SESSION['type']))
 
 	<div class="for-row mb-3">
 		<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Major service">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="service[ ]" value="Major service">
   <label class="form-check-label" for="inlineCheckbox1">Major service</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Minor service">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="service[ ]" value="Minor service">
   <label class="form-check-label" for="inlineCheckbox2">Minor Service</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="62 Point check">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="service[ ]" value="62 Point check">
   <label class="form-check-label" for="inlineCheckbox3">62 Point check</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Battery">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="service[ ]" value="Battery">
   <label class="form-check-label" for="inlineCheckbox4">Battery</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="Clutch">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="service[ ]" value="Clutch">
   <label class="form-check-label" for="inlineCheckbox5">Clutch</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="Cambelt">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="service[ ]" value="Cambelt">
   <label class="form-check-label" for="inlineCheckbox6">Cambelt</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="Engine">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" name="service[ ]" value="Engine">
   <label class="form-check-label" for="inlineCheckbox7">Engine</label>
 </div>
 </div>
@@ -317,41 +318,41 @@ if(isset($_SESSION['type']))
 
 <div class="form-row mb-3">
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="Transmission">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox8" name="service[ ]" value="Transmission">
   <label class="form-check-label" for="inlineCheckbox8">Transmission</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="Axle">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox9" name="service[ ]" value="Axle">
   <label class="form-check-label" for="inlineCheckbox9">Axle</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="Brakes">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox10" name="service[ ]" value="Brakes">
   <label class="form-check-label" for="inlineCheckbox10">Brakes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="Suspension">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox11" name="service[ ]" value="Suspension">
   <label class="form-check-label" for="inlineCheckbox11">Suspension</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="Body dent">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox12" name="service[ ]" value="Body dent">
   <label class="form-check-label" for="inlineCheckbox12">Body Dent</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="Paint">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox13" name="service[ ]" value="Paint">
   <label class="form-check-label" for="inlineCheckbox13">Paint</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="Battery">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox14" name="service[ ]" value="Battery">
   <label class="form-check-label" for="inlineCheckbox14">Battery</label>
 </div>
 </div>
 
 <div class="form-row">
 	<div class="col-md-8 mb-3">
-	 <label for="validationCustom03">Anything Else we should know?</label>
-	 <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Anything Else we should know?" required>
+	 <label for="validationCustom03">Anything else we should know?</label>
+	 <input type="text" name="message" class="form-control" id="validationCustom03" placeholder="Anything else we should know?">
 	 <div class="invalid-feedback">
-		 Please provide engine number
+		 Please provide a message
 	 </div>
 	</div>
 </div>
@@ -360,7 +361,7 @@ if(isset($_SESSION['type']))
 	<div class="form-row ">
 		<div class="col-md-4 mb-3">
 				<label for="validationCustom04">Select Branch</label>
-				<select name="gender" class="custom-select" id="validationCustom04" required>
+				<select name="branch" class="custom-select" id="validationCustom04" required>
 					<option selected disabled value="">Select Branch</option>
 					<option>Dhaka</option>
 					<option>Chittagong</option>
@@ -382,7 +383,7 @@ if(isset($_SESSION['type']))
 				</div>
 			</div>
 		</div>
-		<button class="btn btn-primary" name="add_customer_detail" type="submit">Submit</button>
+		<button class="btn btn-primary" name="add_quote" type="submit">Submit</button>
 		<a class="btn btn-danger" href="../index.php" role="button">Cancel</a>
 	</form>
 

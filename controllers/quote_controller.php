@@ -1,30 +1,30 @@
 <?php
 require_once "../models/database_crud.php";
-if(isset($_POST["add_customer_detail"]))
+if(isset($_POST["add_quote"]))
 {
-  insertUser();
-  insertLogin();
+  insertQuote();
 }
 
-function insertUser()
+function insertQuote()
 	{
 		$first_name=$_POST["first_name"];
 		$last_name=$_POST["last_name"];
-		$date=$_POST["date"];
-		$gender=$_POST["gender"];
 		$email=$_POST["email"];
     $phone=$_POST["phone"];
-    $street=$_POST["street"];
-    $city=$_POST["city"];
-    $state=$_POST["state"];
-    $zip=$_POST["zip"];
-    $username=$_POST["username"];
-    $pass=$_POST["password"];
-    $passToDB = password_hash($pass, PASSWORD_DEFAULT);
-		$query="INSERT INTO users_detail VALUES(NULL,'$first_name','$last_name','$date','$gender','$email','$phone','$street','$city','$state','$zip','$username','$passToDB')";
-		execute($query);
+    $car_make=$_POST["car_make"];
+    $car_model=$_POST["car_model"];
+    $trim=$_POST["trim"];
+    $year=$_POST["year"];
+    $registration_no=$_POST["registration_no"];
+    $engine_no=$_POST["engine_no"];
+    $checkbox=$_POST["service"];
+    $message=$_POST["message"];
+    $branch=$_POST["branch"];
 
-    $query="INSERT INTO login VALUES(NULL,'$username','$passToDB','user')";
+
+
+		$query="INSERT INTO quote VALUES(NULL,'$first_name','$last_name','$email','$phone','$car_make','$car_model','$trim','$year','$registration_no','$engine_no','".$checkbox[$i]."','$message','$branch')";
 		execute($query);
     header("Location: ../views/index.php");
 	}
+?>
