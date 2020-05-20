@@ -22,9 +22,15 @@ function insertQuote()
     $branch=$_POST["branch"];
 
 
+    foreach($checkbox as $chk1)
+       {
+          $chk .= $chk1.",";
+       }
 
-		$query="INSERT INTO quote VALUES(NULL,'$first_name','$last_name','$email','$phone','$car_make','$car_model','$trim','$year','$registration_no','$engine_no','".$checkbox[$i]."','$message','$branch')";
-		execute($query);
-    header("Location: ../views/index.php");
+    		$query="INSERT INTO quote VALUES(NULL,'$first_name','$last_name','$email','$phone','$car_make','$car_model','$trim','$year','$registration_no','$engine_no','$chk','$message','$branch')";
+    		execute($query);
+        header("Location: ../views/index.php");
+
+
 	}
 ?>
