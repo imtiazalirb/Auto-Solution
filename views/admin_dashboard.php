@@ -21,8 +21,10 @@ else
 
 require_once ('../controllers/employee_signup_controller.php');
 require_once ('../controllers/customer_signup_controller.php');
+require_once ('../controllers/quote_controller.php');
 	$employee=count(getAllEmployees());
 	$customer=count(getAllUser());
+	$quote=count(getAllQuote());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,9 +97,9 @@ require_once ('../controllers/customer_signup_controller.php');
   </div>
 	<div class="card border-secondary">
     <div class="card-body">
-      <h5 class="card-title text-secondary text-center">Quotation Requests</h5>
-      <p class="text-center text-secondary">	</p>
-			
+      <h5 class="card-title text-secondary text-center">Quote Reqs</h5>
+      <p class="text-center text-secondary"><?php echo $quote;?></p>
+			<a class="btn btn-outline-success btn-block" href="admin_quotation_management.php" role="button">See All Quotes</a>
     </div>
   </div>
   <div class="card border-info">
