@@ -71,5 +71,8 @@ else
 <script src="../js/jquery-slim.min.js"></script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+
+<a class="btn btn-danger my-sm-2 ml-lg-2 "href="../views/user_car_add.php">Add your car</a>
+
 </body>
 </html>
