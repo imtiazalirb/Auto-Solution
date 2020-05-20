@@ -30,7 +30,12 @@ function insertQuote()
     		$query="INSERT INTO quote VALUES(NULL,'$first_name','$last_name','$email','$phone','$car_make','$car_model','$trim','$year','$registration_no','$engine_no','$chk','$message','$branch')";
     		execute($query);
         header("Location: ../views/index.php");
-
-
 	}
+
+  function getAllQuote()
+  {
+    $query ="SELECT * FROM quote ORDER BY Id ASC";
+    $quotes = get($query);
+    return $quotes;
+  }
 ?>
