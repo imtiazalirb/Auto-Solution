@@ -194,6 +194,7 @@ include '../controllers/quote_controller.php';
           <option>AUDI</option>
           <option>BMW</option>
           <option>Cadillac</option>
+					<option>Chevrolet</option>
 					<option>Citroën</option>
 					<option>Daewoo</option>
 					<option>Daihatsu</option>
