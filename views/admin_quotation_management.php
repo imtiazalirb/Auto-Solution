@@ -19,6 +19,10 @@ else
   header('location:../views/index.php');
 }
 ?>
+<?php
+require '../controllers/quote_controller.php';
+$quotes = getAllQuote();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +74,48 @@ else
     </nav>
   </div>
 </header>
+
+<!--TABLE-->
+
+<table class="table table-striped my-3" id="quote_data">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Car Make</th>
+        <th>Model</th>
+        <th>Trim</th>
+        <th>Year</th>
+        <th>Reg</th>
+        <th>Engine No</th>
+				<th>Service Needed</th>
+        <th>Message</th>
+				<th>Selected Branch</th>
+      </tr>
+    </thead>
+		<?php
+				foreach($quotes as $quote)
+				{
+					echo "<tr>";
+						echo "<th>".$quote["id"]."</th>";
+						echo "<th>".$quote["first_name"]." ".$quote["last_name"]."</th>";
+						echo "<th>".$quote["email"]."</th>";
+						echo "<th>".$quote["phone"]."</th>";
+						echo "<th>".$quote["car_make"]."</th>";
+						echo "<th>".$quote["car_model"]."</th>";
+						echo "<th>".$quote["trim"]."</th>";
+						echo "<th>".$quote["year"]."</th>";
+						echo "<th>".$quote["registration_no"]."</th>";
+						echo "<th>".$quote["engine_no"]."</th>";
+						echo "<th>".$quote["service_needed"]."</th>";
+						echo "<th>".$quote["message"]."</th>";
+						echo "<th>".$quote["branch"]."</th>";
+					echo "</tr>";
+				}
+			?>
+  </table>
 
 <div style="margin-top:50px"></div>
 <script src="../js/jquery-slim.min.js"></script>
