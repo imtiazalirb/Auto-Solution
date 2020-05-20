@@ -80,19 +80,19 @@ include '../controllers/employee_signup_controller.php';
 <h3 class="display-5 text-center my-4">Add your car</h3>
 <div class="container">
 
-  <form class="needs-validation" method="post" action="../controllers/employee_signup_controller.php" enctype="multipart/form-data" novalidate>
+  <form class="needs-validation" method="post" action="../controllers/add_car_controller.php" enctype="multipart/form-data" novalidate>
 
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">Brand</label>
-      <input type="text" name="first_name" class="form-control" id="validationCustom01" placeholder="Brand" required>
+      <input type="text" name="brand" class="form-control" id="validationCustom01" placeholder="Brand" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Model</label>
-      <input type="text" name="last_name" class="form-control" id="validationCustom02" placeholder="Model" required>
+      <input type="text" name="model" class="form-control" id="validationCustom02" placeholder="Model" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -102,14 +102,14 @@ include '../controllers/employee_signup_controller.php';
   <div class="form-row ">
     <div class="col-md-4 mb-3">
       <label for="validationCustom3">Engine Number</label>
-      <input type="text" name="last_name" class="form-control" id="validationCustom02" placeholder="Engine Number" required>
+      <input type="text" name="engine_number" class="form-control" id="validationCustom03" placeholder="Engine Number" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom4">Chassis Number</label>
-      <input type="text" name="last_name" class="form-control" id="validationCustom02" placeholder="Chassis Number" required>
+      <input type="text" name="chassis_number" class="form-control" id="validationCustom04" placeholder="Chassis Number" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -118,27 +118,27 @@ include '../controllers/employee_signup_controller.php';
 
   <div class="form-row ">
     <div class="col-md-4 mb-3">
-      <label for="validationCustom3">Color</label>
-      <input type="text" name="last_name" class="form-control" id="validationCustom02" placeholder="Color" required>
+      <label for="validationCustom5">Color</label>
+      <input type="text" name="color" class="form-control" id="validationCustom05" placeholder="Color" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustom02">Registration Number</label>
-      <input type="tel" name="phone" class="form-control" id="validationCustom02" placeholder="Registration Number" required>
+      <label for="validationCustom06">Registration Number</label>
+      <input type="tel" name="registration_number" class="form-control" id="validationCustom06" placeholder="Registration Number" required>
       <small id="phonedHelpInline" class="text-muted">
         Ex: DHAKA METRO KH-XX-XXXX
       </small>
-      <div class="invalid-feedback">
-        Please provide a valid phone number
+      <div class="valid-feedback">
+        Looks good!
       </div>
     </div>
   </div>
 
 
-  <button class="btn btn-primary" name="add_employee_detail" type="submit">Add</button>
-  <a class="btn btn-danger" href="../views/admin_dashboard.php" role="button">Cancel</a>
+  <button class="btn btn-primary" name="add_user_car" type="submit">Add</button>
+  <a class="btn btn-danger" href="../views/user_dashboard.php" role="button">Cancel</a>
 </form>
 
 <script>
