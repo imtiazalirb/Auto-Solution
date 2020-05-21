@@ -43,12 +43,17 @@ else
           <li class="nav-item active">
             <a class="nav-link" href="user_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_cars.php">My Cars</a>
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Manage Cars
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="user_add_car.php">Add Cars</a>
+              <a class="dropdown-item" href="#">Edit Cars</a>
+              <a class="dropdown-item" href="#">Manage Cars</a>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_service_car.php">Service Car</a>
-          </li>
+          <li cl
           <li class="nav-item">
             <a class="nav-link" href="user_service_history.php">Service History</a>
           </li>
@@ -71,8 +76,6 @@ else
 <script src="../js/jquery-slim.min.js"></script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-
-<a class="btn btn-danger my-sm-2 ml-lg-2 "href="../views/user_car_add.php">Add your car</a>
 
 </body>
 </html>
