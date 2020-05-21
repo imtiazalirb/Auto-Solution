@@ -141,7 +141,6 @@ if(isset($_SESSION['type']))
 include '../controllers/quote_controller.php';
 ?>
 
-
 <h3 class="display-5 text-center my-4">Quotation Form</h3>
 <div class="container">
 
