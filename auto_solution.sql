@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2020 at 09:33 AM
+-- Generation Time: May 21, 2020 at 10:35 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `auto_solution`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car`
+--
+
+CREATE TABLE `car` (
+  `car_id` int(12) NOT NULL,
+  `user_id` int(12) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `car_make` varchar(50) NOT NULL,
+  `car_model` varchar(50) NOT NULL,
+  `trim` varchar(50) DEFAULT NULL,
+  `body_type` varchar(50) NOT NULL,
+  `year` int(10) NOT NULL,
+  `color` varchar(50) DEFAULT NULL,
+  `drivetrain` varchar(50) NOT NULL,
+  `engine_type` varchar(50) NOT NULL,
+  `fuel_type` varchar(50) NOT NULL,
+  `engine_no` varchar(50) NOT NULL,
+  `registration_no` varchar(50) NOT NULL,
+  `vin_no` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -144,6 +168,13 @@ INSERT INTO `users_detail` (`id`, `first_name`, `last_name`, `birth_date`, `gend
 --
 
 --
+-- Indexes for table `car`
+--
+ALTER TABLE `car`
+  ADD PRIMARY KEY (`car_id`),
+  ADD UNIQUE KEY `registration_no` (`registration_no`);
+
+--
 -- Indexes for table `employees_detail`
 --
 ALTER TABLE `employees_detail`
@@ -177,6 +208,12 @@ ALTER TABLE `users_detail`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `car`
+--
+ALTER TABLE `car`
+  MODIFY `car_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `employees_detail`
