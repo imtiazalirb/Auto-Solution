@@ -66,6 +66,16 @@ require_once ('../controllers/quote_controller.php');
           <li class="nav-item">
             <a class="nav-link" href="admin_all_userview.php">Customer Management</a>
           </li>
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Product Management
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="admin_all_product.php">All Product</a>
+              <a class="dropdown-item" href="admin_add_product.php">Add Product</a>
+              <a class="dropdown-item" href="admin_edit_product.php">Edit Product Detail</a>
+            </div>
+          </li>
         </ul>
 
       <!--LOGOUT BUTTON-->
@@ -97,7 +107,7 @@ require_once ('../controllers/quote_controller.php');
   </div>
 	<div class="card border-secondary">
     <div class="card-body">
-      <h5 class="card-title text-secondary text-center">Quote Reqs</h5>
+      <h4 class="card-title text-secondary text-center">Quote Reqs</h4>
       <p class="text-center text-secondary"><?php echo $quote;?></p>
 			<a class="btn btn-outline-success btn-block" href="admin_quotation_management.php" role="button">See All Quotes</a>
     </div>
