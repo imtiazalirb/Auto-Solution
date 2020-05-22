@@ -25,8 +25,15 @@ function insertCar()
     $engine_no = $_POST["engine_no"];
     $registration_no = $_POST["registration_no"];
     $vin_no = $_POST["vin_no"];
+    //file upload
+        $target_dir="../storage/car_image/";
+        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+		//echo $target_file;
 
-    $query="INSERT INTO car VALUES(NULL,'$user_id','$user_name','$car_make','$car_model','$trim','$body_type','$year','$color','$drivetrain','$engine_type','$fuel_type','$engine_no','$registration_no','$vin_no')";
+    $query="INSERT INTO car VALUES(NULL,'$user_id','$user_name','$car_make','$car_model','$trim','$body_type','$year','$color','$drivetrain','$engine_type','$fuel_type','$engine_no','$registration_no','$vin_no','$target_file')";
 		execute($query);
     header("location:../views/user_dashboard.php");
   }
