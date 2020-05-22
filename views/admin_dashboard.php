@@ -18,14 +18,24 @@ else
 {
   header('location:../views/index.php');
 }
-
-require_once ('../controllers/employee_signup_controller.php');
-require_once ('../controllers/customer_signup_controller.php');
-require_once ('../controllers/quote_controller.php');
-	$employee=count(getAllEmployees());
-	$customer=count(getAllUser());
-	$quote=count(getAllQuote());
 ?>
+<?php
+require_once ('../controllers/employee_signup_controller.php');
+	$employee=count(getAllEmployees());
+ ?>
+ <?php
+ require_once ('../controllers/customer_signup_controller.php');
+ 	$customer=count(getAllUser());
+  ?>
+	<?php
+	require_once ('../controllers/quote_controller.php');
+		$quote=count(getAllQuote());
+	 ?>
+	 <?php
+	 require_once ('../controllers/car_controller.php');
+		 $cars=count(getAllCar());
+		?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,10 +122,11 @@ require_once ('../controllers/quote_controller.php');
 			<a class="btn btn-outline-success btn-block" href="admin_quotation_management.php" role="button">See All Quotes</a>
     </div>
   </div>
+
   <div class="card border-info">
     <div class="card-body">
       <h4 class="card-title text-info text-center">Registerd Cars</h4>
-      <p class="text-center text-info"></p>
+      <p class="text-center text-info"><?php echo "$cars"; ?></p>
     </div>
   </div>
 	<div class="card border-warning">
