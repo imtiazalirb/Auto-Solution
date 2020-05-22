@@ -1,5 +1,6 @@
 <?php
-include "../models/database_crud.php";
+require_once "../models/database_connect.php";
+require_once "../models/database_crud.php";
 if(isset($_POST["add_car"]))
 {
   insertCar();
@@ -45,9 +46,17 @@ function insertCar()
         session_start();
     }
     $user_id = $_SESSION['id'];
-		$query="SELECT * FROM car WHERE  user_id = $user_id  ";
+		$query="SELECT * FROM car WHERE  user_id = $user_id";
 		$car=get($query);
 		return $car;
 	}
+
+  function getAllCar()
+	{
+		$query="SELECT * FROM car";
+		$cars=get($query);
+		return $cars;
+	}
+
 
 ?>
