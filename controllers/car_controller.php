@@ -1,16 +1,16 @@
-
 <?php
 include "../models/database_crud.php";
 if(isset($_POST["add_car"]))
 {
-
   insertCar();
-
 }
 
 function insertCar()
 {
-  session_start();
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
     $user_id = $_SESSION["id"];
     $user_name = $_SESSION['username'];
     $car_make = $_POST['car_make'];
@@ -30,5 +30,17 @@ function insertCar()
 		execute($query);
     header("location:../views/user_dashboard.php");
   }
+
+  function getCar()
+	{
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $user_id = $_SESSION['id'];
+		$query="SELECT * FROM car WHERE  user_id = $user_id  ";
+		$car=get($query);
+		return $car;
+	}
 
 ?>
