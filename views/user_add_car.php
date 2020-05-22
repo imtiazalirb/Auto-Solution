@@ -51,7 +51,7 @@ else
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Add Cars</a>
-              <a class="dropdown-item" href="#">Edit Cars</a>
+              <a class="dropdown-item" href="#">My Cars</a>
               <a class="dropdown-item" href="#">Manage Cars</a>
             </div>
           </li>
@@ -252,6 +252,16 @@ include '../controllers/car_controller.php';
         </small>
       </div>
     </div>
+		<div class="form-row">
+			<div class="form-group col-md-3">
+      <label for="File">Choose Image</label>
+      <input class="form-control" type="file" name="image" id="file">
+      <small class="form-text text-muted" id="fileHelp">Max size 1MB</small>
+    </div>
+
+		</div>
+
+
     <div class="form-group">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
