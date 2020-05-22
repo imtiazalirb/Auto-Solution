@@ -18,6 +18,9 @@ else
 {
   header('location: ../views/index.php');
 }
+
+require_once ('../controllers/car_controller.php');
+$car=count(getCar());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +52,7 @@ else
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="user_add_car.php">Add Cars</a>
-              <a class="dropdown-item" href="#">Edit Cars</a>
+              <a class="dropdown-item" href="user_my_cars.php">My Cars</a>
               <a class="dropdown-item" href="#">Manage Cars</a>
             </div>
           </li>
@@ -71,6 +74,20 @@ else
     </nav>
   </div>
 </header>
+
+<br>
+<div class="container">
+	<div class="card-deck">
+  <div class="card border-primary">
+    <div class="card-body">
+      <h4 class="card-title text-primary text-center">Cars</h4>
+      <p class="text-center text-primary"><?php echo $car;?></p>
+			<a class="btn btn-outline-primary btn-block" href="admin_all_employee.php" role="button">My cars</a>
+    </div>
+  </div>
+</div>
+</div>
+
 
 <div style="margin-top:50px"></div>
 <script src="../js/jquery-slim.min.js"></script>
