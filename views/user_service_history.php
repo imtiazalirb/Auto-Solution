@@ -49,7 +49,7 @@ else
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Add Cars</a>
-              <a class="dropdown-item" href="#">Edit Cars</a>
+              <a class="dropdown-item" href="#">My Cars</a>
               <a class="dropdown-item" href="#">Manage Cars</a>
             </div>
           </li>
