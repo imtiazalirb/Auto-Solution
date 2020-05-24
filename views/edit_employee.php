@@ -96,9 +96,9 @@ $employee=getEmployee($eid);
    <form class="needs-validation" method="post" action="../controllers/employee_signup_controller.php" enctype="multipart/form-data" novalidate>
    <div class="form-row">
      <div class="col-md-4 mb-3">
-       <fieldset disabled>
+       <fieldset >
        <label for="validationCustom01">First name</label>
-       <input type="text" name="first_name" value="<?php echo $employee["first_name"]?>" class="form-control" id="validationCustom01" placeholder="First name" required>
+       <input type="text" name="first_name" readonly value="<?php echo $employee["first_name"]?>" class="form-control-plaintext col-md-4" id="validationCustom01" placeholder="First name" required>
        <div class="valid-feedback">
          Looks good!
        </div>
@@ -106,7 +106,7 @@ $employee=getEmployee($eid);
      <div class="col-md-4 mb-3">
        <fieldset disabled>
        <label for="validationCustom02">Last name</label>
-       <input type="text" name="last_name" value="<?php echo $employee["last_name"]?>" class="form-control" id="validationCustom02" placeholder="Last name" required>
+       <input type="text" name="last_name" readonly value="<?php echo $employee["last_name"]?>" class="form-control-plaintext" id="validationCustom02" placeholder="Last name" required>
        <div class="valid-feedback">
          Looks good!
        </div>
