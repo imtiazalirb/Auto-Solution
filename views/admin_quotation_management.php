@@ -109,19 +109,19 @@ $quotes = getAllQuote();
 				foreach($quotes as $quote)
 				{
 					echo "<tr>";
-						echo "<th>".$quote["id"]."</th>";
-						echo "<th>".$quote["first_name"]." ".$quote["last_name"]."</th>";
-						echo "<th>".$quote["email"]."</th>";
-						echo "<th>".$quote["phone"]."</th>";
-						echo "<th>".$quote["car_make"]."</th>";
-						echo "<th>".$quote["car_model"]."</th>";
-						echo "<th>".$quote["trim"]."</th>";
-						echo "<th>".$quote["year"]."</th>";
-						echo "<th>".$quote["registration_no"]."</th>";
-						echo "<th>".$quote["engine_no"]."</th>";
-						echo "<th>".$quote["service_needed"]."</th>";
-						echo "<th>".$quote["message"]."</th>";
-						echo "<th>".$quote["branch"]."</th>";
+						echo "<td>".$quote["id"]."</td>";
+						echo "<td>".$quote["first_name"]." ".$quote["last_name"]."</td>";
+						echo "<td>".$quote["email"]."</td>";
+						echo "<td>".$quote["phone"]."</td>";
+						echo "<td>".$quote["car_make"]."</td>";
+						echo "<td>".$quote["car_model"]."</td>";
+						echo "<td>".$quote["trim"]."</td>";
+						echo "<td>".$quote["year"]."</td>";
+						echo "<td>".$quote["registration_no"]."</td>";
+						echo "<td>".$quote["engine_no"]."</td>";
+						echo "<td>".$quote["service_needed"]."</td>";
+						echo "<td>".$quote["message"]."</td>";
+						echo "<td>".$quote["branch"]."</td>";
 					echo "</tr>";
 				}
 			?>
