@@ -21,7 +21,7 @@ else
 ?>
 <?php
 require_once ("../controllers/car_controller.php");
-$cars = getCar();
+$cars = getCars();
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,45 +34,6 @@ $cars = getCar();
   <title>Auto Service</title>
 </head>
 <style>
-.card{
-	border:1px solid black;
-	width:300px;
-	height:50px;
-	margin-left:10px;
-	margin-right:10px;
-	margin-top:10px;
-	border-radius: 5px;
-	text-align: center;
-	background-color:black;
-	padding:5px
-}
-
-.card-car{
-	border:1px solid;
-	width:200px;
-	height:280px;
-	margin-left:10px;
-	margin-right:10px;
-	margin-top:10px;
-	border-radius: 5px;
-	text-align: center;
-	padding:5px;
-}
-
-.card-image{
-	display: block;
-margin-left: auto;
-margin-right: auto;
-width: 168px;
-height: 200px;
-	border-radius: 5px;
-	object-fit: cover;
-}
-.card-text{
-	text-align: bottom;
-
-}
-
 </style>
 <body>
   <header>
@@ -95,13 +56,18 @@ height: 200px;
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="user_add_car.php">Add Cars</a>
               <a class="dropdown-item" href="user_my_cars.php">My Cars</a>
-              <a class="dropdown-item" href="#">Manage Cars</a>
+              <a class="dropdown-item" href="user_manage_car.php">Manage Cars</a>
             </div>
           </li>
-          <li cl
-          <li class="nav-item">
-            <a class="nav-link" href="user_service_history.php">Service History</a>
-          </li>
+					<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Servicing
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="user_service_status.php">Service Request Status</a>
+						<a class="dropdown-item" href="user_service_record.php">Servicing Record</a>
+					</div>
+				</li>
           <li class="nav-item">
             <a class="nav-link" href="user_profile.php">My Profile</a>
           </li>
