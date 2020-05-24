@@ -35,4 +35,16 @@ function insertUser()
     $users = get($query);
     return $users;
   }
+
+  function getUser($id)
+  {
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $id = $_SESSION['id'];
+    $query="SELECT * FROM users_detail WHERE id = $id ";
+    $user=get($query);
+    return $user[0];
+  }
 ?>
