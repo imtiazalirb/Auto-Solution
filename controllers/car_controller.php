@@ -1,9 +1,13 @@
 <?php
-require_once "../models/database_connect.php";
+//require_once "../models/database_connect.php";
 require_once "../models/database_crud.php";
 if(isset($_POST["add_car"]))
 {
   insertCar();
+}
+if(isset($_GET["delete"]))
+{
+  deleteCar();
 }
 
 function insertCar()
@@ -39,7 +43,7 @@ function insertCar()
     header("location:../views/user_dashboard.php");
   }
 
-  function getCar()
+  function getCars()
 	{
     if(!isset($_SESSION))
     {
@@ -51,6 +55,13 @@ function insertCar()
 		return $car;
 	}
 
+  function getCar($car_id)
+  {
+    $query="SELECT * FROM car WHERE car_id = $car_id";
+    $car=get($query);
+    return $car[0];
+  }
+
   function getAllCar()
 	{
 		$query="SELECT * FROM car";
@@ -58,5 +69,12 @@ function insertCar()
 		return $cars;
 	}
 
+function deleteCar()
+{
+  $car_id = $_GET['delete'];
+  $query = "DELETE FROM car where car_id=$car_id";
+  execute($query);
+  header("location:../views/user_manage_car.php");
+}
 
 ?>
