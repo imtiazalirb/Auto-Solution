@@ -313,10 +313,7 @@ include '../controllers/quote_controller.php';
   <input class="form-check-input" type="checkbox" id="inlineCheckbox7" name="service[ ]" value="Engine">
   <label class="form-check-label" for="inlineCheckbox7">Engine</label>
 </div>
-</div>
 
-
-<div class="form-row mb-3">
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox8" name="service[ ]" value="Transmission">
   <label class="form-check-label" for="inlineCheckbox8">Transmission</label>
