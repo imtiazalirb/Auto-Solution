@@ -112,19 +112,19 @@ $employees = getAllEmployees();
 				foreach($employees as $employee)
 				{
 					echo "<tr>";
-						echo "<th>".$employee["id"]."</th>";
-						echo "<th>".$employee["first_name"]." ".$employee["last_name"]."</th>";
-						echo "<th>".$employee["birth_date"]."</th>";
-						echo "<th>".$employee["gender"]."</th>";
-						echo "<th>".$employee["email"]."</th>";
-						echo "<th>".$employee["phone"]."</th>";
-						echo "<th>".$employee["designation"]."</th>";
-						echo "<th>".$employee["salary"]."</th>";
-						echo "<th>".$employee["street"]."</th>";
-						echo "<th>".$employee["city"]."</th>";
-						echo "<th>".$employee["state"]."</th>";
-						echo "<th>".$employee["zip"]."</th>";
-						echo "<th>".$employee["username"]."</th>";
+						echo "<td>".$employee["id"]."</td>";
+						echo "<td>".$employee["first_name"]." ".$employee["last_name"]."</td>";
+						echo "<td>".$employee["birth_date"]."</td>";
+						echo "<td>".$employee["gender"]."</td>";
+						echo "<td>".$employee["email"]."</td>";
+						echo "<td>".$employee["phone"]."</td>";
+						echo "<td>".$employee["designation"]."</td>";
+						echo "<td>".$employee["salary"]."</td>";
+						echo "<td>".$employee["street"]."</th>";
+						echo "<td>".$employee["city"]."</td>";
+						echo "<td>".$employee["state"]."</td>";
+						echo "<td>".$employee["zip"]."</td>";
+						echo "<td>".$employee["username"]."</td>";
 					echo "</tr>";
 				}
 			?>
