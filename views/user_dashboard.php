@@ -20,7 +20,7 @@ else
 }
 
 require_once ('../controllers/car_controller.php');
-$car=count(getCar());
+$car=count(getCars());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,13 +53,18 @@ $car=count(getCar());
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="user_add_car.php">Add Cars</a>
               <a class="dropdown-item" href="user_my_cars.php">My Cars</a>
-              <a class="dropdown-item" href="#">Manage Cars</a>
+              <a class="dropdown-item" href="user_manage_car.php">Manage Cars</a>
             </div>
           </li>
-          <li cl
-          <li class="nav-item">
-            <a class="nav-link" href="user_service_history.php">Service History</a>
-          </li>
+					<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Servicing
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="user_service_status.php">Service Request Status</a>
+						<a class="dropdown-item" href="user_service_record.php">Servicing Record</a>
+					</div>
+				</li>
           <li class="nav-item">
             <a class="nav-link" href="user_profile.php">My Profile</a>
           </li>
@@ -82,7 +87,7 @@ $car=count(getCar());
     <div class="card-body">
       <h4 class="card-title text-primary text-center">Cars</h4>
       <p class="text-center text-primary"><?php echo $car;?></p>
-			<a class="btn btn-outline-primary btn-block" href="admin_all_employee.php" role="button">My cars</a>
+			<a class="btn btn-outline-primary btn-block" href="user_my_cars.php" role="button">My cars</a>
     </div>
   </div>
 </div>
