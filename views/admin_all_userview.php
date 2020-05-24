@@ -113,17 +113,17 @@ $users = getAllUser();
 				foreach($users as $user)
 				{
 					echo "<tr>";
-						echo "<th>".$user["id"]."</th>";
-						echo "<th>".$user["first_name"]." ".$user["last_name"]."</th>";
-						echo "<th>".$user["birth_date"]."</th>";
-						echo "<th>".$user["gender"]."</th>";
-						echo "<th>".$user["email"]."</th>";
-						echo "<th>".$user["phone"]."</th>";
-						echo "<th>".$user["street"]."</th>";
-						echo "<th>".$user["city"]."</th>";
-						echo "<th>".$user["state"]."</th>";
-            echo "<th>".$user["zip"]."</th>";
-						echo "<th>".$user["username"]."</th>";
+						echo "<td>".$user["id"]."</td>";
+						echo "<td>".$user["first_name"]." ".$user["last_name"]."</td>";
+						echo "<td>".$user["birth_date"]."</td>";
+						echo "<td>".$user["gender"]."</td>";
+						echo "<td>".$user["email"]."</td>";
+						echo "<td>".$user["phone"]."</td>";
+						echo "<td>".$user["street"]."</td>";
+						echo "<td>".$user["city"]."</td>";
+						echo "<td>".$user["state"]."</td>";
+            echo "<td>".$user["zip"]."</td>";
+						echo "<td>".$user["username"]."</td>";
 					echo "</tr>";
 				}
 			?>
