@@ -48,14 +48,20 @@ else
               Manage Cars
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Add Cars</a>
-              <a class="dropdown-item" href="#">My Cars</a>
-              <a class="dropdown-item" href="#">Manage Cars</a>
+              <a class="dropdown-item" href="user_add_car.php">Add Cars</a>
+              <a class="dropdown-item" href="user_my_cars.php">My Cars</a>
+              <a class="dropdown-item" href="user_manage_car.php">Manage Cars</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_service_history.php">Service History</a>
-          </li>
+					<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Servicing
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="user_service_status.php">Service Request Status</a>
+						<a class="dropdown-item" href="user_service_record.php">Servicing Record</a>
+					</div>
+				</li>
           <li class="nav-item active">
             <a class="nav-link" href="user_profile.php">My Profile</a>
           </li>
