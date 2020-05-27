@@ -1,5 +1,6 @@
 <?php
-include "../models/database_crud.php";
+require_once "../models/database_crud.php";
+include "../models/database_connect.php";
 if(isset($_POST["add_employee_detail"]))
 {
   insertEmployee();
@@ -48,12 +49,6 @@ function insertEmployee()
     header("location:../views/admin_all_employee.php");
 	}
 
-  function getEmployee($id)
-	{
-		$query="SELECT * FROM employees_detail WHERE id=$id";
-		$employee=get($query);
-		return $employee[0];
-	}
 
   function editEmployee()
 	{
@@ -75,6 +70,14 @@ function insertEmployee()
 		header("location:../views/admin_all_employee.php");
 	}
 
+  function getEmployee($username)
+{
+  $query="SELECT * FROM employees_detail WHERE username='$username'";
+  $employee=get($query);
+  return $employee[0];
+}
+
+
   function deleteEmployee()
   {
     $id=$_POST["id"];
@@ -83,4 +86,19 @@ function insertEmployee()
 		execute($query);
 		header("location:../views/admin_all_employee.php");
   }
+
+  function getEmployees($username) //service_confirm
+  {
+    if(!isset($_SESSION))
+    {
+        session_start();
+        $_GET['username'];
+    }
+    $username = $_SESSION['username'];
+    $query="SELECT * FROM `employees_detail` WHERE username = '$username' ";
+    $employee=get($query);
+    return $employee[0];
+  }
+
+
 ?>
