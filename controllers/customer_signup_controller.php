@@ -1,5 +1,6 @@
 <?php
 require_once "../models/database_crud.php";
+require_once "../models/database_connect.php";
 if(isset($_POST["add_customer_detail"]))
 {
   insertUser();
@@ -36,14 +37,15 @@ function insertUser()
     return $users;
   }
 
-  function getUser($id)
+  function getUser($username)
   {
     if(!isset($_SESSION))
     {
         session_start();
+        $_GET['username'];
     }
-    $id = $_SESSION['id'];
-    $query="SELECT * FROM users_detail WHERE id = $id ";
+    $username = $_SESSION['username'];
+    $query="SELECT * FROM users_detail WHERE username = '$username' ";
     $user=get($query);
     return $user[0];
   }
