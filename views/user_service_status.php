@@ -81,16 +81,9 @@ $servicerequests = getServiceRequests();
 <div class="container">
 <div class = "btn-group col-md-12 " style="align-center;">
 
- <button type="button" hr class="btn btn-outline-info active">
-  Serivce Requested
- </button>
- <button type="button" class="btn btn-outline-info ">
-	 On Service
- </button>
- <button type="button" class="btn btn-outline-info">
-	 Service History
- </button>
-
+<a class="btn btn-outline-info active" href="user_service_status.php">Requested Service</a>
+<a class="btn btn-outline-info" href="user_service_ongoing.php">Service Ongoing</a>
+<a class="btn btn-outline-info" href="user_service_ongoing.php">Serviced</a>
 
 		</div>
   </div>
