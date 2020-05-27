@@ -30,10 +30,6 @@ $employees = getAllEmployees();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
- 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
   <link rel="stylesheet" href="styles/mystyle.css">
   <title>Auto Service</title>
 </head>
@@ -48,24 +44,30 @@ $employees = getAllEmployees();
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="admin_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="admin_quotation_management.php">Quotation Requests</a>
           </li>
-					<li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Employee Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="admin_all_employee.php">All Employee</a>
               <a class="dropdown-item" href="admin_employee_signup.php">Assign Employee</a>
-              <a class="dropdown-item" href="#">Edit Employee Detail</a>
+              <a class="dropdown-item" href="admin_edit_employee.php">Edit Employee Detail</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin_all_userview.php">Customer Management</a>
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Customer Service Management
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="admin_all_userview.php">All User</a>
+              <a class="dropdown-item" href="admin_service_requests.php">Service State</a>
+            </div>
           </li>
 					<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -113,20 +115,20 @@ $employees = getAllEmployees();
 				foreach($employees as $employee)
 				{
 					echo "<tr>";
-						echo "<th>".$employee["id"]."</th>";
-						echo "<th>".$employee["first_name"]." ".$employee["last_name"]."</th>";
-						echo "<th>".$employee["birth_date"]."</th>";
-						echo "<th>".$employee["gender"]."</th>";
-						echo "<th>".$employee["email"]."</th>";
-						echo "<th>".$employee["phone"]."</th>";
-						echo "<th>".$employee["designation"]."</th>";
-						echo "<th>".$employee["salary"]."</th>";
-						echo "<th>".$employee["street"]."</th>";
-						echo "<th>".$employee["city"]."</th>";
-						echo "<th>".$employee["state"]."</th>";
-						echo "<th>".$employee["zip"]."</th>";
-						echo "<th>".$employee["username"]."</th>";
-            echo '<th><a href="edit_employee.php?id='.$employee["id"].'" class="btn btn-warning">Edit/Delete</a></th>';
+						echo "<td>".$employee["id"]."</td>";
+						echo "<td>".$employee["first_name"]." ".$employee["last_name"]."</td>";
+						echo "<td>".$employee["birth_date"]."</td>";
+						echo "<td>".$employee["gender"]."</td>";
+						echo "<td>".$employee["email"]."</td>";
+						echo "<td>".$employee["phone"]."</td>";
+						echo "<td>".$employee["designation"]."</td>";
+						echo "<td>".$employee["salary"]."</td>";
+						echo "<td>".$employee["street"]."</td>";
+						echo "<td>".$employee["city"]."</td>";
+						echo "<td>".$employee["state"]."</td>";
+						echo "<td>".$employee["zip"]."</td>";
+						echo "<td>".$employee["username"]."</td>";
+            echo '<td><a href="edit_employee.php?username='.$employee["username"].'" class="btn btn-warning">Edit/Delete</a></td>';
 					echo "</tr>";
 				}
 				?>
