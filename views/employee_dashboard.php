@@ -44,16 +44,7 @@ else
             <a class="nav-link" href="user_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="user_cars.php">Service quoue</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_service_car.php">My Service History</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_service_history.php">All service history</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_profile.php">My Profile</a>
+            <a class="nav-link" href="employee_service_requests.php">My Service History</a>
           </li>
         </ul>
 
