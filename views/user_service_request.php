@@ -26,8 +26,8 @@ $car=getCar($cid);
 ?>
 <?php
 include '../controllers/customer_signup_controller.php';
-$uid = $_SESSION['id'];
-$user=getUser($uid);
+$uname = $_SESSION['username'];
+$user=getUser($uname);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +90,7 @@ height: 200px;
 
       <!--LOGOUT BUTTON-->
 
-      <h5 class="my-sm-2 mr-lg-2">Welcome, <?php echo $_SESSION['username'];?></h5>
+      <h5 class="my-sm-2 mr-lg-2">Welcome, <?php echo $_SESSION['username'];?> </h5>
 
       <a class="btn btn-danger my-sm-2 ml-lg-2 "href="../controllers/logout.php">Logout</a>
      </div>
