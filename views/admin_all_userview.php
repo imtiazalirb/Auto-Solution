@@ -48,7 +48,7 @@ $users = getAllUser();
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="admin_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -61,11 +61,17 @@ $users = getAllUser();
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="admin_all_employee.php">All Employee</a>
               <a class="dropdown-item" href="admin_employee_signup.php">Assign Employee</a>
-              <a class="dropdown-item" href="#">Edit Employee Detail</a>
+              <a class="dropdown-item" href="admin_edit_employee.php">Edit Employee Detail</a>
             </div>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="admin_customer_management.php">Customer Management</a>
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Customer Service Management
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="admin_all_userview.php">All User</a>
+              <a class="dropdown-item" href="admin_service_requests.php">Service State</a>
+            </div>
           </li>
 					<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -73,8 +73,14 @@ require_once ('../controllers/employee_signup_controller.php');
               <a class="dropdown-item" href="admin_edit_employee.php">Edit Employee Detail</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin_all_userview.php">Customer Management</a>
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Customer Service Management
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="admin_all_userview.php">All User</a>
+              <a class="dropdown-item" href="admin_service_requests.php">Service State</a>
+            </div>
           </li>
 					<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -100,22 +106,22 @@ require_once ('../controllers/employee_signup_controller.php');
 
 <br>
 <div class="container">
-	<div class="card-deck">
-  <div class="card border-primary">
+	<div class="card-deck col-md-12 justify-content-center">
+  <div class="card border-primary col-md-2">
     <div class="card-body">
-      <h4 class="card-title text-primary text-center">Employees</h4>
+      <h4 class="card-title text-primary text-center">Total Employee</h4>
       <p class="text-center text-primary"><?php echo $employee;?></p>
 			<a class="btn btn-outline-primary btn-block" href="admin_all_employee.php" role="button">See All Employees</a>
     </div>
   </div>
-  <div class="card border-success">
+  <div class="card border-success col-md-2">
     <div class="card-body">
       <h4 class="card-title text-success text-center">Users</h4>
       <p class="text-center text-success"><?php echo $customer;?></p>
 			<a class="btn btn-outline-success btn-block" href="admin_all_userview.php" role="button">See All Users</a>
     </div>
   </div>
-	<div class="card border-secondary">
+	<div class="card border-secondary col-md-2">
     <div class="card-body">
       <h4 class="card-title text-secondary text-center">Quote Reqs</h4>
       <p class="text-center text-secondary"><?php echo $quote;?></p>
@@ -123,13 +129,13 @@ require_once ('../controllers/employee_signup_controller.php');
     </div>
   </div>
 
-  <div class="card border-info">
+  <div class="card border-info col-md-2">
     <div class="card-body">
       <h4 class="card-title text-info text-center">Registerd Cars</h4>
       <p class="text-center text-info"><?php echo "$cars"; ?></p>
     </div>
   </div>
-	<div class="card border-warning">
+	<div class="card border-warning col-md-2">
 		<div class="card-body">
 			<h4 class="card-title text-warning text-center">Service Done</h4>
 			<p class="text-center text-warning"></p>
