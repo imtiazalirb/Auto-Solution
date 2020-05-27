@@ -123,10 +123,12 @@ height: 200px;
 					<span class="align-bottom"><?php echo $car["car_model"];?></span>
 					<span class="align-bottom"><?php echo $car["trim"];?></span>
 					<div class="text">	<?php echo $car["registration_no"];?></div>
+
 					<a class="btn btn-danger btn-sm" name="delete_car" href="../controllers/car_controller.php?delete=<?php echo $car['car_id'];?>" onclick="return confirm('Are you sure you want to delete this item?');" style="width:160px;position:absolute;transition: .5s ease;top: 80%;left: 5%;">Delete Car</a>
+
 					<a class="btn btn-info btn-sm" name="service_car" href="user_service_request.php?car_id=<?php echo $car['car_id'];?>" style="width:160px;position:absolute;transition: .5s ease;top: 90%;left: 5%;">Request for service</a>
 			</div>
-<?php
+		<?php
 			}
 		?>
 
