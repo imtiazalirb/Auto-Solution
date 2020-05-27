@@ -1,5 +1,5 @@
 <?php
-//require_once "../models/database_connect.php";
+///require_once "../models/database_connect.php";
 require_once "../models/database_crud.php";
 if(isset($_POST["add_car"]))
 {
@@ -17,7 +17,7 @@ function insertCar()
         session_start();
     }
     $user_id = $_SESSION["id"];
-    $user_name = $_SESSION['username'];
+    $username = $_SESSION['username'];
     $car_make = $_POST['car_make'];
     $car_model = $_POST["car_model"];
     $trim = $_POST["trim"];
@@ -38,9 +38,10 @@ function insertCar()
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 		//echo $target_file;
 
-    $query="INSERT INTO car VALUES(NULL,'$user_id','$user_name','$car_make','$car_model','$trim','$body_type','$year','$color','$drivetrain','$engine_type','$fuel_type','$engine_no','$registration_no','$vin_no','$target_file')";
+    $query="INSERT INTO car VALUES(NULL,'$user_id','$username','$car_make','$car_model','$trim','$body_type','$year','$color','$drivetrain','$engine_type','$fuel_type','$engine_no','$registration_no','$vin_no','$target_file',NULL,NULL,NULL)";
 		execute($query);
-    header("location:../views/user_dashboard.php");
+    echo($query);
+    header("location:../views/user_my_cars.php");
   }
 
   function getCars()
