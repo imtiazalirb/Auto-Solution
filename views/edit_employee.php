@@ -21,7 +21,7 @@ else
 ?>
 <?php
 include '../controllers/employee_signup_controller.php';
-$eid = $_GET["id"];
+$eid = $_GET["username"];
 $employee=getEmployee($eid);
 ?>
 
