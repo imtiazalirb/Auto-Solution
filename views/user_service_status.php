@@ -83,7 +83,7 @@ $servicerequests = getServiceRequests();
 
 <a class="btn btn-outline-info active" href="user_service_status.php">Requested Service</a>
 <a class="btn btn-outline-info" href="user_service_ongoing.php">Service Ongoing</a>
-<a class="btn btn-outline-info" href="user_service_ongoing.php">Serviced</a>
+<a class="btn btn-outline-info" href="user_service_complete.php">Serviced</a>
 
 		</div>
   </div>
@@ -95,15 +95,15 @@ $servicerequests = getServiceRequests();
 <table class="table  table-hover table-striped table-sm  my-3" id="service_request_data">
     <thead>
       <tr>
-        <th>Car</th>
+				<th>Car</th>
 				<th>Drivetrain</th>
 				<th>Fuel Type</th>
 				<th>Registration Number</th>
 				<th>Service Needed</th>
-				<th>Message</th>
+				<th>Note</th>
 				<th>Service Requested</th>
-				<th>Last Serviced</th>
-				<th>Last Serviced ODO Reading</th>
+				<th>Serviced Date</th>
+				<th>Odo Reading when Serviced</th>
       </tr>
     </thead>
 		<tbody>
