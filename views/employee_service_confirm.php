@@ -69,10 +69,12 @@ else
   </div>
 </header>
 
+<!--FORM-->
+
 <h3 class="display-5 text-center my-4">Servicing Information</h3>
 <div class="container">
 
-  <form class="needs-validation" method="post" action="" enctype="multipart/form-data" novalidate>
+  <form class="needs-validation" method="post" action="../controllers/service_request_controller.php" enctype="multipart/form-data" novalidate>
   <div class="form-row">
     <div class="col-md-8 mb-3">
       <fieldset >
@@ -143,8 +145,21 @@ else
       <label for="validationCustom01">Serviced By</label>
       <input type="text" name="serviced_by" readonly value="<?php echo $employee["first_name"]?> <?php echo $employee["last_name"]?>" class="form-control-plaintext" id="validationCustom01" placeholder="" required>
     </div>
-    <input type="hidden" name="" value="">
-
+		<div class="col-md-4 mb-3">
+      <fieldset>
+      <label for="validationCustom01">Servicing Date Date</label>
+			<input type="text" name="date" class="form-control col-md-5" id="date"  placeholder="YYYY-DD-MM" required>
+	    <div class="invalid-feedback">
+	      Please provide serviced date.
+	    </div>
+    </div>
+		<div class="col-md-4 mb-3">
+      <label for="validationCustom01">Odometer Reading</label>
+      <input type="number" name="odo" class="form-control col-md-7" id="validationCustom01" placeholder="Odometer" required>
+      <div class="invalid-feedback">
+        PLease provide a valid Odometer Reading
+      </div>
+    </div>
   </div><hr>
 
   <p>What was serviced in the car?</p>
@@ -218,6 +233,10 @@ else
   <textarea class="form-control rounded-0" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div><hr>
 
+<input type="hidden" name="employee_username" value="<?php echo $employee["username"]?>">
+
+<input type="hidden" name="service_id" value="<?php echo $underservice["service_request_id"]?>">
+
 
 
   <div class="form-group">
@@ -231,6 +250,54 @@ else
       </div>
     </div>
   </div>
-  <button class="btn btn-success" name="add_service_request" type="submit">Send Request</button>
-  <a class="btn btn-danger" href="../views/user_manage_car.php" role="button">Cancel</a>
+  <button class="btn btn-success" name="confirm_service" type="submit">Confirm Service</button>
+  <a class="btn btn-danger" onclick="return confirm('Are you sure you want to confirm this service?');" href="../views/employee_service_requests.php" role="button">Cancel</a>
 </form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+</div>
+  <div style="margin-top:50px"></div>
+  <script src="../js/jquery-slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <script>
+  $(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'yyyy-mm-dd',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+      startDate: "1900-01-01",
+      endDate: "2020-12-31",
+			todayBtn: "linked",
+    clearBtn: true,
+		})
+	})
+  </script>
+</body>
+</html>
