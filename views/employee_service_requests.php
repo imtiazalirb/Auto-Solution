@@ -63,6 +63,18 @@ $rows = getAllUnderService();
 </header>
 
 <!--TABLE-->
+
+<div class="container">
+<div class = "btn-group col-md-12 " style="align-center;">
+
+
+<a class="btn btn-outline-info active" href="employee_service_requests.php">Service Awaiting</a>
+<a class="btn btn-outline-info" href="employee_service_history.php">My servicing History</a>
+
+	 </div>
+	</div>
+
+
 <div class="table-responsive">
 <table class="table table-sm table-striped my-3" id="service_request_data">
     <thead>
