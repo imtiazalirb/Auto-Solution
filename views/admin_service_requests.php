@@ -94,7 +94,7 @@ $rows = getAllServiceRequests();
 
 	 <a class="btn btn-outline-info active" href="admin_service_requests.php">Requested Service</a>
 	 <a class="btn btn-outline-info" href="admin_service_ongoing.php">Service Ongoing</a>
-	 <a class="btn btn-outline-info" href="user_service_ongoing.php">Serviced</a>
+	 <a class="btn btn-outline-info" href="admin_service_complete.php">Serviced</a>
 
 	 		</div>
 	   </div>
