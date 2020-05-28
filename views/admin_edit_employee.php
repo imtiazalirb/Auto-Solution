@@ -44,13 +44,13 @@ $employees = getAllEmployees();
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="admin_dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="admin_quotation_management.php">Quotation Requests</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Employee Management
             </a>
