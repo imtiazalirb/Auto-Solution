@@ -12,6 +12,11 @@ if(isset($_GET["approve"]))
   changeServiceStatus();
 }
 
+if (isset($_POST["confirm_service"]))
+{
+  serviceSuccessful();
+}
+
 function insertServiceRequest()
 	{
     $car_id=$_POST["car_id"];
@@ -38,6 +43,9 @@ function insertServiceRequest()
     $last_serviced_item=$_POST["last_serviced_item"];
     $last_serviced_date=$_POST["last_serviced_date"];
     $last_serviced_odo=$_POST["last_serviced_odo"];
+    $mechanic_message=$_POST["mechanic_message"];
+    $serviced_by=$_POST["serviced_by"];
+    $employee_username=$_POST["employee_username"];
     $servicing_stage=$_POST["servicing_stage"];
     $chk="";
 
@@ -46,7 +54,7 @@ function insertServiceRequest()
           $chk .= $chk1." ";
        }
 
-    		$query="INSERT INTO service_request VALUES (NULL,'$car_id','$user_id','$name','$username','$street','$city','$zip','$phone','$email','$car_detail','$body_type','$year','$color','$drivetrain','$engine_type','$fuel_type','$engine_no','$registration_no','$vin_no','$chk','$message','$last_serviced_item',DEFAULT,'$last_serviced_date','$last_serviced_odo','$servicing_stage')";
+    		$query="INSERT INTO service_request VALUES (NULL,'$car_id','$user_id','$name','$username','$street','$city','$zip','$phone','$email','$car_detail','$body_type','$year','$color','$drivetrain','$engine_type','$fuel_type','$engine_no','$registration_no','$vin_no','$chk','$message','$last_serviced_item',DEFAULT,'$last_serviced_date','$last_serviced_odo','$mechanic_message','$serviced_by','$employee_username','$servicing_stage')";
     		execute($query);
         //echo ($query);
         header("Location: ../views/user_service_status.php");
@@ -58,8 +66,8 @@ function insertServiceRequest()
     {
         session_start();
     }
-    $user_id = $_SESSION['id'];
-    $query="SELECT * FROM service_request WHERE  user_id = $user_id AND servicing_stage = 0";
+    $username = $_SESSION['username'];
+    $query="SELECT * FROM service_request WHERE  username = '$username' AND servicing_stage = 0";
     $service_request=get($query);
     return $service_request;
   }
@@ -70,8 +78,20 @@ function insertServiceRequest()
     {
         session_start();
     }
-    $user_id = $_SESSION['id'];
-    $query="SELECT * FROM service_request WHERE  user_id = $user_id AND servicing_stage = 1";
+    $username = $_SESSION['username'];
+    $query="SELECT * FROM service_request WHERE  username = '$username' AND servicing_stage = 1";
+    $service_request=get($query);
+    return $service_request;
+  }
+
+  function getServiced() //last
+  {
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $username = $_SESSION['username'];
+    $query="SELECT * FROM service_request WHERE  username = '$username' AND servicing_stage = 2";
     $service_request=get($query);
     return $service_request;
   }
@@ -92,6 +112,14 @@ function insertServiceRequest()
     header("location:../views/admin_service_requests.php");
 	}
 
+  function getAllServiced()
+	{
+		$query ="SELECT * FROM service_request WHERE servicing_stage = 2 ORDER BY service_request_id ASC";
+		$service_requests = get($query);
+		return $service_requests;
+    header("location:../views/admin_service_requests.php");
+	}
+
   function changeServiceStatus()
   {
     $id = $_GET['approve'];
@@ -107,6 +135,40 @@ function insertServiceRequest()
     return $get_service_info[0];
   }
 
+  function serviceSuccessful()
+  {
+
+    $serviced_by=$_POST["serviced_by"];
+    $date=$_POST["date"];
+		$odo=$_POST["odo"];
+    $message=$_POST["message"];
+    $id=$_POST["service_id"];
+    $employee_username=$_POST["employee_username"];
+    $checkbox=$_POST["service"];
+    $chk="";
+
+    foreach($checkbox as $chk1)
+       {
+          $chk .= $chk1." ";
+       }
+
+		$query="UPDATE service_request SET serviced_by='$serviced_by', last_serviced_date='$date', last_serviced_odo='$odo', mechanic_message='$message',employee_username = '$employee_username' ,last_serviced_item='$chk', servicing_stage='2' WHERE service_request_id = $id";
+		echo $query;
+		execute($query);
+		header("location:../views/employee_service_requests.php");
+  }
+
+  function getAllEmployeesServiced()
+  {
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $employee_username = $_SESSION['username'];
+    $query="SELECT * FROM service_request WHERE  employee_username = '$employee_username' AND servicing_stage = 2";
+    $service_history=get($query);
+    return $service_history;
+  }
 
 
 ?>
