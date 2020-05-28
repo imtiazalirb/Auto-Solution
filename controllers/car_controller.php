@@ -50,8 +50,8 @@ function insertCar()
     {
         session_start();
     }
-    $user_id = $_SESSION['id'];
-		$query="SELECT * FROM car WHERE  user_id = $user_id";
+    $username = $_SESSION['username'];
+		$query="SELECT * FROM car WHERE  username = '$username'";
 		$car=get($query);
 		return $car;
 	}
