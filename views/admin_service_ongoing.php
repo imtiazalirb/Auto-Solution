@@ -128,7 +128,6 @@ $rows = getAllUnderService();
 					 <th>Last Serviced Item</th>
 					 <th>Last Servicing Date</th>
 					 <th>Last Service Odo</th>
-					 <th>Action</th>
 	       </tr>
 	     </thead>
 			 <tbody>
@@ -160,7 +159,6 @@ $rows = getAllUnderService();
 							echo "<td>".$row["last_serviced_item"]."</td>";
 							echo "<td>".$row["last_serviced_date"]."</td>";
 							echo "<td>".$row["last_serviced_odo"]."</td>"; ?>
-							<td><a class="btn btn-success" onclick="return confirm('Are you sure you want to confirm?');" name="approve" href="../controllers/service_request_controller.php?approve=<?php echo $row["service_request_id"];?>">Approve</a></td>
 	 				<?php		echo "</tr>";
 	 				}
 	 			?>

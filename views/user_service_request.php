@@ -157,7 +157,7 @@ height: 200px;
     </div>
     <div class="col-md-4 mb-3">
       <fieldset >
-      <label for="validationCustom01">Color</label>
+      <label for="validationCustom01">Registration No</label>
       <input type="text" name="registration_no" readonly value="<?php echo $car["registration_no"]?>" class="form-control-plaintext" id="validationCustom01" placeholder="" required>
     </div>
     <div class="col-md-4 mb-3">
